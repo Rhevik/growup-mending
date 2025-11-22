@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://mle2rjcdertf"]
+
+[ext_resource type="Texture2D" uid="uid://0ippu1thqesq" path="res://icon.svg" id="1_bvv6b"]
+[ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="2_ijr48"]
+
+[node name="ShaderTest" type="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_ijr48")
+position = Vector2(357, 192)
+texture = ExtResource("1_bvv6b")
+
+[node name="Shader_TextureRect" type="TextureRect" parent="."]
+material = ExtResource("2_ijr48")
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 1160.0
+offset_bottom = 648.0
