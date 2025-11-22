@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=12 format=3 uid="uid://cmfsyjxq6uh86"]
 
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
 [ext_resource type="Texture2D" uid="uid://dnj252uwsuygs" path="res://Assets/UI/Flextape_UI.png" id="1_ibotj"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="2_nltto"]
 [ext_resource type="Resource" uid="uid://xftevqf358xg" path="res://Challenges/ChallengeTest.tres" id="3_ibotj"]
 [ext_resource type="Resource" uid="uid://bpcm8tx86dnrl" path="res://Challenges/ChallengeTest_2.tres" id="4_n5ude"]
+[ext_resource type="Texture2D" uid="uid://bel5g0w63rwrq" path="res://Assets/UI/unpressed_tape.png" id="6_e2l4f"]
+[ext_resource type="Texture2D" uid="uid://p8tqar06ajck" path="res://Assets/UI/pressed_tape.png" id="7_n5rqp"]
+[ext_resource type="Texture2D" uid="uid://dd3808dck2nl7" path="res://Assets/UI/unpressed_kiss.png" id="8_gs482"]
+[ext_resource type="Texture2D" uid="uid://c0xbfdvvcxwoo" path="res://Assets/UI/pressed_kiss.png" id="9_cxd00"]
+[ext_resource type="Texture2D" uid="uid://clghys13gb376" path="res://Assets/UI/unpressed_punch.png" id="10_etlur"]
+[ext_resource type="Texture2D" uid="uid://brr7lswttw38" path="res://Assets/UI/pressed_punch.png" id="11_7rqds"]
 
 [node name="UI" type="Node"]
 
@@ -18,13 +24,25 @@ AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("3_ibotj"), ExtResour
 [node name="ActionButtons" type="Node" parent="."]
 
 [node name="TapeButton" type="TextureButton" parent="ActionButtons"]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 230.0
+offset_top = 750.0
+offset_right = 582.0
+offset_bottom = 1036.0
+texture_normal = ExtResource("6_e2l4f")
+texture_pressed = ExtResource("7_n5rqp")
 
 [node name="KissButton" type="TextureButton" parent="ActionButtons"]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 820.0
+offset_top = 754.0
+offset_right = 1172.0
+offset_bottom = 1040.0
+texture_normal = ExtResource("8_gs482")
+texture_pressed = ExtResource("9_cxd00")
 
-[node name="HammerButton" type="TextureButton" parent="ActionButtons"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PunchButton" type="TextureButton" parent="ActionButtons"]
+offset_left = 1380.0
+offset_top = 748.0
+offset_right = 1732.0
+offset_bottom = 1034.0
+texture_normal = ExtResource("10_etlur")
+texture_pressed = ExtResource("11_7rqds")
