@@ -1,8 +1,0 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://xftevqf358xg"]
-
-[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://challenge.gd" id="1_ya6ux"]
-
-[resource]
-script = ExtResource("1_ya6ux")
-id = "argument"
-solution = Array[int]([0, 0])

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://xftevqf358xg"]
+
+[ext_resource type="SpriteFrames" path="res://new_sprite_frames.tres" id="1_4hmfp"]
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_ya6ux"]
+
+[resource]
+script = ExtResource("1_ya6ux")
+id = "argument"
+damagedImage = ExtResource("1_4hmfp")
+solution = Array[int]([0, 0])
