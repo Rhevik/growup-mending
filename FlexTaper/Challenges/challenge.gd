@@ -1,3 +1,4 @@
+class_name Challenge
 extends Resource
 
 @export var id: String
