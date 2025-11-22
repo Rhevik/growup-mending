@@ -7,11 +7,11 @@ var challengeTimer: Timer
 var introMusic: AudioStreamPlayer
 var challenge: Challenge
 
-func StartChallenge(newChallenge):
+func StartChallenge(newChallenge) -> Challenge.AcceptedSolutions:
 	challenge = newChallenge
 	await ChallengeIntro()
 	var answer = await ChallengeGame()
-	EvaluateChallenge(answer)
+	return answer
 	
 func ChallengeIntro():
 	introTimer = get_node("IntroTimer")
@@ -27,7 +27,3 @@ func ChallengeGame() -> Challenge.AcceptedSolutions:
 		await get_tree().create_timer(0).timeout
 		
 	return Challenge.AcceptedSolutions.NOTHING
-	
-func EvaluateChallenge(answer):
-	return 0;
-	
