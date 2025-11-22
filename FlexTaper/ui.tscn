@@ -1,8 +1,12 @@
-[gd_scene format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=2 format=3 uid="uid://cmfsyjxq6uh86"]
+
+[ext_resource type="Texture2D" uid="uid://dnj252uwsuygs" path="res://Assets/UI/Flextape_UI.png" id="1_fyqef"]
 
 [node name="UI" type="Node"]
 
-[node name="MainScreen" type="Node2D" parent="."]
+[node name="MainScreen" type="Sprite2D" parent="."]
+texture = ExtResource("1_fyqef")
+centered = false
 
 [node name="ActionButtons" type="Node" parent="."]
 
@@ -14,6 +18,6 @@ offset_bottom = 8.0
 offset_right = 8.0
 offset_bottom = 8.0
 
-[node name="PunchButton" type="TextureButton" parent="ActionButtons"]
+[node name="HammerButton" type="TextureButton" parent="ActionButtons"]
 offset_right = 40.0
 offset_bottom = 40.0
