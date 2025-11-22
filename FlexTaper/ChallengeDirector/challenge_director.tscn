@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cts82vqplkhxn"]
+
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_valok"]
+
+[node name="ChallengeDirector" type="Node"]
+script = ExtResource("1_valok")
+
+[node name="IntroTimer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

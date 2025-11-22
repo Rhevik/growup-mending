@@ -7,4 +7,4 @@ extends Resource
 @export var failedImage: SpriteFrames
 @export var solution: Array[AcceptedSolutions]
 
-enum AcceptedSolutions {TAPE, KISS, WHACK}
+enum AcceptedSolutions {TAPE, KISS, WHACK, NOTHING}
