@@ -1,10 +1,11 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://xftevqf358xg"]
+[gd_resource type="Resource" script_class="Challenge" load_steps=3 format=3 uid="uid://xftevqf358xg"]
 
-[ext_resource type="SpriteFrames" path="res://new_sprite_frames.tres" id="1_4hmfp"]
-[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_ya6ux"]
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_0ul0m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p13vs"]
 
 [resource]
-script = ExtResource("1_ya6ux")
+script = ExtResource("1_0ul0m")
 id = "argument"
-damagedImage = ExtResource("1_4hmfp")
-solution = Array[int]([0, 0])
+damagedImage = SubResource("SpriteFrames_p13vs")
+solution = Array[int]([0, 1])

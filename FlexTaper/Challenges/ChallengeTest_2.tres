@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Challenge" load_steps=3 format=3 uid="uid://bpcm8tx86dnrl"]
+
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_kru3a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p13vs"]
+
+[resource]
+script = ExtResource("1_kru3a")
+id = "skateboard"
+damagedImage = SubResource("SpriteFrames_p13vs")
+solution = Array[int]([2, 0])
