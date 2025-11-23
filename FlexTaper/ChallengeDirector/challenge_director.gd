@@ -9,7 +9,7 @@ extends Node
 @export var failMusic: AudioStreamPlayer
 @export var tvSprite: AnimatedSprite2D
 @export var tvBacking: Sprite2D
-@export var staticTv: SpriteFrames
+@export var staticTv: Sprite2D
 @export var renderViewport: SubViewport
 var challenge: Challenge
 var solution: Challenge.AcceptedSolutions
@@ -41,9 +41,10 @@ func ChallengeIntro():
 	introTimer.start()
 	tvStatic.play();
 	introMusic.play()
-	SetSpriteFrames(staticTv)
+	staticTv.visible = true
 	await introTimer.timeout
 	tvStatic.stop();
+	staticTv.visible = false
 	SetSpriteFrames(challenge.damagedImage)
 	
 func ChallengeOuttroSuccess():

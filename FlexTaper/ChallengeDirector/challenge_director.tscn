@@ -1,22 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cts82vqplkhxn"]
+[gd_scene load_steps=6 format=3 uid="uid://cts82vqplkhxn"]
 
 [ext_resource type="Script" uid="uid://cagflvtcnb2wr" path="res://ChallengeDirector/challenge_director.gd" id="1_valok"]
 [ext_resource type="AudioStream" uid="uid://dr857jjx2w7n4" path="res://Assets/Sound/FixIt.wav" id="2_nb0th"]
-[ext_resource type="Texture2D" uid="uid://bixoysyu2x4oa" path="res://Assets/UI/tvstatic.png" id="2_ox2pi"]
 [ext_resource type="AudioStream" uid="uid://bj2o4d0ctu2h4" path="res://Assets/Sound/AwDangit.wav" id="3_ghvj2"]
 [ext_resource type="AudioStream" uid="uid://btktldulio5kn" path="res://Assets/Sound/Tremendous.wav" id="4_ox2pi"]
 [ext_resource type="AudioStream" uid="uid://pcibu880tqjc" path="res://Assets/Sound/tv-static-sound.mp3" id="6_nri7k"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_nri7k"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_ox2pi")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [node name="ChallengeDirector" type="Node" node_paths=PackedStringArray("introTimer", "challengeTimer", "tvStatic", "introMusic", "successMusic", "failMusic")]
 script = ExtResource("1_valok")
@@ -26,7 +14,6 @@ tvStatic = NodePath("Static")
 introMusic = NodePath("Fixit")
 successMusic = NodePath("Success")
 failMusic = NodePath("Fail")
-staticTv = SubResource("SpriteFrames_nri7k")
 
 [node name="IntroTimer" type="Timer" parent="."]
 wait_time = 0.25
