@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=24 format=3 uid="uid://cmfsyjxq6uh86"]
 
 [ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
 [ext_resource type="Texture2D" uid="uid://dnj252uwsuygs" path="res://Assets/UI/Flextape_UI.png" id="1_ibotj"]
-[ext_resource type="PackedScene" path="res://sub_viewport.tscn" id="2_etlur"]
+[ext_resource type="Texture2D" uid="uid://dwl4ltjrgktq" path="res://Art/bg_winstate.png" id="2_cxd00"]
+[ext_resource type="Texture2D" uid="uid://bixoysyu2x4oa" path="res://Assets/UI/tvstatic.png" id="2_gs482"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="2_nltto"]
+[ext_resource type="Texture2D" uid="uid://dbvc6bprhvnoc" path="res://Art/Fridge/fridge_broken.png" id="3_etlur"]
 [ext_resource type="Texture2D" uid="uid://bel5g0w63rwrq" path="res://Assets/UI/unpressed_tape.png" id="6_e2l4f"]
 [ext_resource type="Texture2D" uid="uid://p8tqar06ajck" path="res://Assets/UI/pressed_tape.png" id="7_n5rqp"]
 [ext_resource type="Resource" uid="uid://ecyd6nnj5ell" path="res://Challenges/Pants.tres" id="8_etlur"]
@@ -19,6 +21,55 @@
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e2l4f"]
 viewport_path = NodePath("SubViewport")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7rqds"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_etlur")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_fkvck"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Backing:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_85vdf"]
+resource_name = "rotate_backing"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Backing:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nas4s"]
+_data = {
+&"RESET": SubResource("Animation_fkvck"),
+&"rotate_backing": SubResource("Animation_85vdf")
+}
 
 [node name="UI" type="Node"]
 
@@ -38,12 +89,26 @@ grow_vertical = 2
 texture = SubResource("ViewportTexture_e2l4f")
 stretch_mode = 3
 
-[node name="SubViewport" parent="." instance=ExtResource("2_etlur")]
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(760, 606)
 
-[node name="Static" parent="SubViewport" index="2"]
-visible = true
+[node name="Backing" type="Sprite2D" parent="SubViewport"]
+texture = ExtResource("2_cxd00")
+centered = false
 
-[node name="AnimationPlayer" parent="SubViewport" index="3"]
+[node name="TelevisionAnimation" type="AnimatedSprite2D" parent="SubViewport"]
+sprite_frames = SubResource("SpriteFrames_7rqds")
+centered = false
+
+[node name="Static" type="Sprite2D" parent="SubViewport"]
+position = Vector2(360, 300)
+scale = Vector2(2.15, 2.15)
+texture = ExtResource("2_gs482")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SubViewport"]
+libraries = {
+&"": SubResource("AnimationLibrary_nas4s")
+}
 autoplay = "RESET"
 
 [node name="MainScreen" type="Sprite2D" parent="."]
@@ -64,7 +129,7 @@ buttonContainerNode = NodePath("../../ActionButtons")
 [node name="IntroNode" type="Node" parent="GameManager"]
 script = ExtResource("10_7rqds")
 
-[node name="ActionButtons" type="Node" parent="."]
+[node name="ActionButtons" type="Node2D" parent="."]
 
 [node name="TapeButton" type="TextureButton" parent="ActionButtons"]
 offset_left = 230.0
@@ -94,6 +159,5 @@ texture_pressed = ExtResource("11_7rqds")
 [connection signal="pressed" from="ActionButtons/KissButton" to="GameManager/ChallengeDirector" method="press_kiss"]
 [connection signal="pressed" from="ActionButtons/PunchButton" to="GameManager/ChallengeDirector" method="press_whack"]
 
-[editable path="SubViewport"]
 [editable path="GameManager"]
 [editable path="GameManager/ChallengeDirector"]

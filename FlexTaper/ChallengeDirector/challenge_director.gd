@@ -11,7 +11,7 @@ extends Node
 @export var tvBacking: Sprite2D
 @export var staticTv: Sprite2D
 @export var renderViewport: SubViewport
-@export var buttonContainerNode: Node
+@export var buttonContainerNode: Node2D
 var challenge: Challenge
 var solution: Challenge.AcceptedSolutions
 var _solutionAllowed: bool
@@ -100,6 +100,7 @@ func press_tape():
 		disable_buttons(true)
 	
 func disable_buttons(disabled):
+	buttonContainerNode.visible = not disabled
 	_solutionAllowed = not disabled
 	
 func ProcessChallengeResult(result : ChallengeResult):
