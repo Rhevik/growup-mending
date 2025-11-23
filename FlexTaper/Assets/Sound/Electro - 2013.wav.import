@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btrq7t2dpeuca"
+path="res://.godot/imported/Electro - 2013.wav-4658531c77537c77f6a9aef1c9081973.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/Electro - 2013.wav"
+dest_files=["res://.godot/imported/Electro - 2013.wav-4658531c77537c77f6a9aef1c9081973.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
