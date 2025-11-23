@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Challenge" load_steps=10 format=3 uid="uid://bhmev0da5a0as"]
+[gd_resource type="Resource" script_class="Challenge" load_steps=10 format=3 uid="uid://dr3r6isy4sers"]
 
 [ext_resource type="Texture2D" uid="uid://b84k5fx0ho03v" path="res://Art/Pants/pants_broken.png" id="1_jsriv"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_ynokd"]
