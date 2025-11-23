@@ -2,6 +2,7 @@ extends Node
 
 @export var AllChallenges: Array[Challenge]
 @export var CurrentChallenge: Challenge
+@export var Director: ChallengeDirector
 
 func _ready():
 	select_next_challenge()
@@ -23,3 +24,7 @@ func press_whack():
 
 func press_tape():
 	attempt_solution(Challenge.AcceptedSolutions.TAPE)
+
+func run_challenge():
+	Director.StartChallenge(CurrentChallenge)
+	
