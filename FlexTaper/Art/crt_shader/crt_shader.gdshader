@@ -9,9 +9,9 @@ const float range = 0.05;
 //const float noiseQuality = 350.0;
 const float noiseQuality = 250.0;
 const float noiseIntensity = 0.0088;
-const float offsetIntensity = 0.02;
-//const float colorOffsetIntensity = 1.3;
-const float colorOffsetIntensity = 3.0;
+const float offsetIntensity = 0.01;
+const float colorOffsetIntensity = 1.3;
+//const float colorOffsetIntensity = 3.0;
 
 
 float rand(vec2 co) {
