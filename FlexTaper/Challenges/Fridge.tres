@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="Challenge" load_steps=8 format=3 uid="uid://m2so6hxtbnp1"]
+
+[ext_resource type="Texture2D" uid="uid://dbvc6bprhvnoc" path="res://Art/Fridge/fridge_broken.png" id="1_0rnbh"]
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_yv2r2"]
+[ext_resource type="Texture2D" uid="uid://dtgy6n76cpxu6" path="res://Art/Fridge/fridge_kiss.png" id="2_74jvu"]
+[ext_resource type="Texture2D" uid="uid://uqlqyvax1t8s" path="res://Art/Fridge/fridge_punch.png" id="2_wvb7l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wvb7l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0rnbh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_738b4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wvb7l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t310j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_74jvu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_yv2r2")
+id = "fridge"
+damagedImage = SubResource("SpriteFrames_wvb7l")
+repairedImage = SubResource("SpriteFrames_t310j")
+failedImage = SubResource("SpriteFrames_738b4")
+solution = Array[int]([])
+metadata/_custom_type_script = "uid://bukmyuebwoyh7"
