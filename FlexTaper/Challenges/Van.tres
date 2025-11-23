@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="Challenge" load_steps=14 format=3 uid="uid://f2uo17uqckcc"]
+
+[ext_resource type="Texture2D" uid="uid://chrayuonxsk86" path="res://Art/Van/van_broken.png" id="1_1o5uf"]
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_gvtap"]
+[ext_resource type="Texture2D" uid="uid://bs4wr77vs2mk2" path="res://Art/Van/van_kiss.png" id="2_jr8fl"]
+[ext_resource type="Texture2D" uid="uid://bvyrqb3hxjnjk" path="res://Art/Van/van_tape.png" id="3_wv2a2"]
+[ext_resource type="Script" uid="uid://whd152x28tog" path="res://Challenges/challengeResult.gd" id="4_jr8fl"]
+[ext_resource type="Texture2D" uid="uid://b2y4pn5ixgg3l" path="res://Art/Van/van_punch.png" id="6_vv8ca"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0s74p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1o5uf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nh2ni"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jr8fl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_357s5"]
+script = ExtResource("4_jr8fl")
+resultImage = SubResource("SpriteFrames_nh2ni")
+goodResult = true
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vv8ca"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wv2a2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_nh2ni"]
+script = ExtResource("4_jr8fl")
+resultImage = SubResource("SpriteFrames_vv8ca")
+goodResult = true
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_357s5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_vv8ca")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_x6tat"]
+script = ExtResource("4_jr8fl")
+resultImage = SubResource("SpriteFrames_357s5")
+goodResult = false
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[resource]
+script = ExtResource("1_gvtap")
+id = ""
+damagedImage = SubResource("SpriteFrames_0s74p")
+tapeResult = SubResource("Resource_nh2ni")
+kissResult = SubResource("Resource_357s5")
+whackResult = SubResource("Resource_x6tat")
+metadata/_custom_type_script = "uid://bukmyuebwoyh7"

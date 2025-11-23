@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=27 format=3 uid="uid://cmfsyjxq6uh86"]
 
 [ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
@@ -18,6 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://clghys13gb376" path="res://Assets/UI/unpressed_punch.png" id="10_etlur"]
 [ext_resource type="Texture2D" uid="uid://brr7lswttw38" path="res://Assets/UI/pressed_punch.png" id="11_7rqds"]
 [ext_resource type="Resource" uid="uid://cjrb2mriy46ou" path="res://Challenges/Business.tres" id="11_nvb2n"]
+[ext_resource type="Resource" uid="uid://bsx2lab7qmc3u" path="res://Challenges/Jukebox.tres" id="12_sosvr"]
+[ext_resource type="Resource" uid="uid://f2uo17uqckcc" path="res://Challenges/Van.tres" id="13_ndy3v"]
+[ext_resource type="AudioStream" uid="uid://btrq7t2dpeuca" path="res://Assets/Sound/Electro - 2013.wav" id="16_7rqds"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e2l4f"]
 viewport_path = NodePath("SubViewport")
@@ -101,6 +104,7 @@ sprite_frames = SubResource("SpriteFrames_7rqds")
 centered = false
 
 [node name="Static" type="Sprite2D" parent="SubViewport"]
+visible = false
 position = Vector2(360, 300)
 scale = Vector2(2.15, 2.15)
 texture = ExtResource("2_gs482")
@@ -116,7 +120,7 @@ texture = ExtResource("1_ibotj")
 centered = false
 
 [node name="GameManager" parent="." node_paths=PackedStringArray("Intro") instance=ExtResource("1_fyqef")]
-AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("9_etlur"), ExtResource("8_etlur"), ExtResource("9_7rqds"), ExtResource("11_nvb2n")])
+AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("9_etlur"), ExtResource("8_etlur"), ExtResource("9_7rqds"), ExtResource("11_nvb2n"), ExtResource("12_sosvr"), ExtResource("13_ndy3v")])
 Intro = NodePath("IntroNode")
 
 [node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("tvSprite", "tvBacking", "staticTv", "renderViewport", "buttonContainerNode")]
@@ -154,6 +158,10 @@ offset_right = 1732.0
 offset_bottom = 1034.0
 texture_normal = ExtResource("10_etlur")
 texture_pressed = ExtResource("11_7rqds")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_7rqds")
+autoplay = true
 
 [connection signal="pressed" from="ActionButtons/TapeButton" to="GameManager/ChallengeDirector" method="press_tape"]
 [connection signal="pressed" from="ActionButtons/KissButton" to="GameManager/ChallengeDirector" method="press_kiss"]
