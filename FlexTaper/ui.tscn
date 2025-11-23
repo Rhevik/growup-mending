@@ -39,6 +39,9 @@ stretch_mode = 3
 
 [node name="SubViewport" parent="." instance=ExtResource("2_etlur")]
 
+[node name="AnimationPlayer" parent="SubViewport" index="3"]
+autoplay = "RESET"
+
 [node name="MainScreen" type="Sprite2D" parent="."]
 texture = ExtResource("1_ibotj")
 centered = false

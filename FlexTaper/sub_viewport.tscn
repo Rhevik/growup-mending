@@ -18,6 +18,7 @@ animations = [{
 [sub_resource type="Animation" id="Animation_85vdf"]
 resource_name = "rotate_backing"
 length = 20.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -73,3 +74,4 @@ texture = ExtResource("3_nas4s")
 libraries = {
 &"": SubResource("AnimationLibrary_nas4s")
 }
+autoplay = "rotate_backing"
