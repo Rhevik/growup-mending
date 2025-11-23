@@ -5,9 +5,9 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p13vs"]
 
-[node name="GameManager" type="Node"]
+[node name="GameManager" type="Node" node_paths=PackedStringArray("Director")]
 script = ExtResource("1_p13vs")
-AllChallenges = null
+Director = NodePath("ChallengeDirector")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_p13vs")

@@ -8,7 +8,8 @@ func _ready():
 	select_next_challenge()
 
 func select_next_challenge():
-	CurrentChallenge = AllChallenges[randi() % AllChallenges.size()] 
+	CurrentChallenge = AllChallenges[randi() % AllChallenges.size()]
+	await run_challenge() 
 
 func attempt_solution(solution):
 	if(CurrentChallenge.solution.has(solution)):
@@ -26,5 +27,5 @@ func press_tape():
 	attempt_solution(Challenge.AcceptedSolutions.TAPE)
 
 func run_challenge():
-	Director.StartChallenge(CurrentChallenge)
+	await Director.StartChallenge(CurrentChallenge)
 	

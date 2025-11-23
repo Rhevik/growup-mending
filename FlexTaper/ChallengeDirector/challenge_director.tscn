@@ -14,8 +14,10 @@ successMusic = NodePath("Success")
 failMusic = NodePath("Fail")
 
 [node name="IntroTimer" type="Timer" parent="."]
+one_shot = true
 
 [node name="ChallengeTimer" type="Timer" parent="."]
+one_shot = true
 
 [node name="Fixit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_nb0th")
