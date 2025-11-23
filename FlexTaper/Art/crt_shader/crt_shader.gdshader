@@ -1,12 +1,15 @@
 shader_type canvas_item;
 
-uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
 
+//const float range = 0.25;
 const float range = 0.05;
+//const float noiseQuality = 350.0;
 const float noiseQuality = 250.0;
 const float noiseIntensity = 0.0088;
 const float offsetIntensity = 0.02;
-const float colorOffsetIntensity = 1.3;
+//const float colorOffsetIntensity = 1.3;
+const float colorOffsetIntensity = 3.0;
+
 
 float rand(vec2 co) {
     return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
