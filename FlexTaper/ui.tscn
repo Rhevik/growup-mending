@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=12 format=3 uid="uid://cmfsyjxq6uh86"]
 
+[ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
 [ext_resource type="Texture2D" uid="uid://dnj252uwsuygs" path="res://Assets/UI/Flextape_UI.png" id="1_ibotj"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="2_nltto"]
@@ -13,23 +14,19 @@
 
 [node name="UI" type="Node"]
 
+[node name="TelevisionAnimation" type="AnimatedSprite2D" parent="."]
+material = ExtResource("1_e2l4f")
+position = Vector2(990, 444)
+
 [node name="MainScreen" type="Sprite2D" parent="."]
 texture = ExtResource("1_ibotj")
 centered = false
-
-[node name="BoxContainer" type="BoxContainer" parent="MainScreen"]
-offset_left = 614.0
-offset_top = 136.0
-offset_right = 1362.0
-offset_bottom = 744.0
-
-[node name="TelevisionAnimation" type="AnimatedSprite2D" parent="MainScreen/BoxContainer"]
 
 [node name="GameManager" parent="." instance=ExtResource("1_fyqef")]
 AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("3_ibotj")])
 
 [node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("tvSprite")]
-tvSprite = NodePath("../../MainScreen/BoxContainer/TelevisionAnimation")
+tvSprite = NodePath("../../TelevisionAnimation")
 
 [node name="ActionButtons" type="Node" parent="."]
 
