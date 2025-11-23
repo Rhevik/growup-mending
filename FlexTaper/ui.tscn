@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=18 format=3 uid="uid://cmfsyjxq6uh86"]
 
 [ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://clghys13gb376" path="res://Assets/UI/unpressed_punch.png" id="10_etlur"]
 [ext_resource type="Texture2D" uid="uid://brr7lswttw38" path="res://Assets/UI/pressed_punch.png" id="11_7rqds"]
 [ext_resource type="Resource" uid="uid://bll1f68qg5htk" path="res://Challenges/Business.tres" id="11_nvb2n"]
+[ext_resource type="AudioStream" uid="uid://btrq7t2dpeuca" path="res://Assets/Sound/Electro - 2013.wav" id="16_7rqds"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e2l4f"]
 viewport_path = NodePath("SubViewport")
@@ -81,6 +82,10 @@ offset_right = 1732.0
 offset_bottom = 1034.0
 texture_normal = ExtResource("10_etlur")
 texture_pressed = ExtResource("11_7rqds")
+
+[node name="LetTheMusicPlay" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_7rqds")
+autoplay = true
 
 [connection signal="pressed" from="ActionButtons/TapeButton" to="GameManager/ChallengeDirector" method="press_tape"]
 [connection signal="pressed" from="ActionButtons/KissButton" to="GameManager/ChallengeDirector" method="press_kiss"]
