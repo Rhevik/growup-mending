@@ -57,5 +57,9 @@ offset_bottom = 1034.0
 texture_normal = ExtResource("10_etlur")
 texture_pressed = ExtResource("11_7rqds")
 
+[connection signal="pressed" from="ActionButtons/TapeButton" to="GameManager/ChallengeDirector" method="press_tape"]
+[connection signal="pressed" from="ActionButtons/KissButton" to="GameManager/ChallengeDirector" method="press_kiss"]
+[connection signal="pressed" from="ActionButtons/PunchButton" to="GameManager/ChallengeDirector" method="press_whack"]
+
 [editable path="GameManager"]
 [editable path="GameManager/ChallengeDirector"]

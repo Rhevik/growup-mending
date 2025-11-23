@@ -9,11 +9,13 @@ extends Node
 @export var tvSprite: AnimatedSprite2D
 @export var fixItImage: SpriteFrames
 var challenge: Challenge
+var solution: Challenge.AcceptedSolutions
 
 func StartChallenge(newChallenge):
 	challenge = newChallenge
 	await ChallengeIntro()
 	var answer = await ChallengeGame()
+	introMusic.stop();
 	if(DidPlayerSucceedChallenge(answer)):
 		await ChallengeOuttroSuccess();
 	else:
@@ -44,11 +46,11 @@ func ChallengeGame() -> Challenge.AcceptedSolutions:
 	challengeTimer = get_node("ChallengeTimer")
 	challengeTimer.start()
 
-	while (challengeTimer.time_left > 0):
-		print(challengeTimer.time_left)
+	solution = Challenge.AcceptedSolutions.NOTHING
+	while (challengeTimer.time_left > 0 && solution == Challenge.AcceptedSolutions.NOTHING):
 		await get_tree().create_timer(0).timeout
 		
-	return Challenge.AcceptedSolutions.NOTHING
+	return solution
 
 func DidPlayerSucceedChallenge(result) -> bool:
 	print("Succeed?")
@@ -56,3 +58,12 @@ func DidPlayerSucceedChallenge(result) -> bool:
 		return true
 	else:
 		return false
+
+func press_kiss():
+	solution = Challenge.AcceptedSolutions.KISS
+
+func press_whack():
+	solution = Challenge.AcceptedSolutions.WHACK
+
+func press_tape():
+	solution = Challenge.AcceptedSolutions.TAPE
