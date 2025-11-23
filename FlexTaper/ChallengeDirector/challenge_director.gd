@@ -14,6 +14,7 @@ extends Node
 @export var buttonContainerNode: Node
 var challenge: Challenge
 var solution: Challenge.AcceptedSolutions
+var _solutionAllowed: bool
 
 func StartChallenge(newChallenge):
 	challenge = newChallenge
@@ -79,20 +80,22 @@ func DidPlayerSucceedChallenge(result) -> bool:
 		return false
 
 func press_kiss():
-	solution = Challenge.AcceptedSolutions.KISS
-	SetSpriteFrames(challenge.kissImage)
-	disable_buttons(true)
+	if (_solutionAllowed):
+		solution = Challenge.AcceptedSolutions.KISS
+		SetSpriteFrames(challenge.kissImage)
+		disable_buttons(true)
 
 func press_whack():
-	solution = Challenge.AcceptedSolutions.WHACK
-	SetSpriteFrames(challenge.whackImage)
-	disable_buttons(true)
+	if (_solutionAllowed):
+		solution = Challenge.AcceptedSolutions.WHACK
+		SetSpriteFrames(challenge.whackImage)
+		disable_buttons(true)
 
 func press_tape():
-	solution = Challenge.AcceptedSolutions.TAPE
-	SetSpriteFrames(challenge.tapeImage)
-	disable_buttons(true)
+	if (_solutionAllowed):
+		solution = Challenge.AcceptedSolutions.TAPE
+		SetSpriteFrames(challenge.tapeImage)
+		disable_buttons(true)
 	
 func disable_buttons(disabled):
-	for button : BaseButton in buttonContainerNode.get_children():
-		button.disabled = disabled
+	_solutionAllowed = not disabled
