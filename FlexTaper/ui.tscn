@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=16 format=3 uid="uid://cmfsyjxq6uh86"]
 
 [ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
 [ext_resource type="Texture2D" uid="uid://dnj252uwsuygs" path="res://Assets/UI/Flextape_UI.png" id="1_ibotj"]
+[ext_resource type="Texture2D" uid="uid://bd82ef3d8fis6" path="res://Tests/test_arguing_challenge.png" id="2_gs482"]
+[ext_resource type="Texture2D" uid="uid://0ippu1thqesq" path="res://icon.svg" id="2_n5rqp"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="2_nltto"]
 [ext_resource type="Resource" uid="uid://xftevqf358xg" path="res://Tests/ChallengeTest.tres" id="3_ibotj"]
 [ext_resource type="Texture2D" uid="uid://bel5g0w63rwrq" path="res://Assets/UI/unpressed_tape.png" id="6_e2l4f"]
@@ -12,11 +14,50 @@
 [ext_resource type="Texture2D" uid="uid://clghys13gb376" path="res://Assets/UI/unpressed_punch.png" id="10_etlur"]
 [ext_resource type="Texture2D" uid="uid://brr7lswttw38" path="res://Assets/UI/pressed_punch.png" id="11_7rqds"]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_e2l4f"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cxd00"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gs482")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="UI" type="Node"]
 
-[node name="TelevisionAnimation" type="AnimatedSprite2D" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 material = ExtResource("1_e2l4f")
-position = Vector2(990, 444)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -520.0
+offset_top = -404.0
+offset_right = 616.0
+offset_bottom = 382.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_e2l4f")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(1982, 1052)
+
+[node name="TelevisionAnimation" type="AnimatedSprite2D" parent="SubViewport"]
+sprite_frames = SubResource("SpriteFrames_cxd00")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewport"]
+position = Vector2(136.155, 120.715)
+texture = ExtResource("2_n5rqp")
+offset = Vector2(400, 400)
 
 [node name="MainScreen" type="Sprite2D" parent="."]
 texture = ExtResource("1_ibotj")
@@ -26,7 +67,7 @@ centered = false
 AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("3_ibotj")])
 
 [node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("tvSprite")]
-tvSprite = NodePath("../../TelevisionAnimation")
+tvSprite = NodePath("../../SubViewport/TelevisionAnimation")
 
 [node name="ActionButtons" type="Node" parent="."]
 
