@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Challenge" load_steps=7 format=3 uid="uid://bhmev0da5a0as"]
+[gd_resource type="Resource" script_class="Challenge" load_steps=10 format=3 uid="uid://bhmev0da5a0as"]
 
 [ext_resource type="Texture2D" uid="uid://b84k5fx0ho03v" path="res://Art/Pants/pants_broken.png" id="1_jsriv"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_ynokd"]
+[ext_resource type="Texture2D" uid="uid://7a75rarbmn8y" path="res://Art/Pants/pants_kiss.png" id="2_216fs"]
 [ext_resource type="Texture2D" uid="uid://dl4opybvp02s1" path="res://Art/Pants/pants_tape.png" id="2_frh7c"]
+[ext_resource type="Texture2D" uid="uid://fmve0v6tubkj" path="res://Art/Pants/pants_hit.png" id="5_q3pvq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_frh7c"]
 animations = [{
@@ -19,7 +21,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_frh7c")
+"texture": ExtResource("2_216fs")
 }],
 "loop": true,
 "name": &"default",
@@ -37,11 +39,23 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_mpf3v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_q3pvq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [resource]
 script = ExtResource("1_ynokd")
 id = ""
 damagedImage = SubResource("SpriteFrames_frh7c")
-repairedImage = SubResource("SpriteFrames_216fs")
-failedImage = SubResource("SpriteFrames_q3pvq")
+tapeImage = SubResource("SpriteFrames_216fs")
+kissImage = SubResource("SpriteFrames_q3pvq")
+whackImage = SubResource("SpriteFrames_mpf3v")
 solution = Array[int]([0])
 metadata/_custom_type_script = "uid://bukmyuebwoyh7"

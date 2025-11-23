@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="Challenge" load_steps=8 format=3 uid="uid://c5xel5w58f8ri"]
+[gd_resource type="Resource" script_class="Challenge" load_steps=10 format=3 uid="uid://c5xel5w58f8ri"]
 
 [ext_resource type="Texture2D" uid="uid://b3me0npw2ucll" path="res://Art/Stuffy/stuffy_broken.png" id="1_5fv00"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_hw01c"]
 [ext_resource type="Texture2D" uid="uid://fhcv6tvh444e" path="res://Art/Stuffy/stuffy_punch.png" id="2_0q4al"]
 [ext_resource type="Texture2D" uid="uid://ckald8p4lc7ei" path="res://Art/Stuffy/stuffy_kiss.png" id="2_ciqdd"]
+[ext_resource type="Texture2D" uid="uid://l83rsg6aqo5l" path="res://Art/Stuffy/stuffy_tape.png" id="3_ciqdd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ciqdd"]
 animations = [{
@@ -20,7 +21,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_0q4al")
+"texture": ExtResource("2_ciqdd")
 }],
 "loop": true,
 "name": &"default",
@@ -31,7 +32,18 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ciqdd")
+"texture": ExtResource("3_ciqdd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_utwp1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0q4al")
 }],
 "loop": true,
 "name": &"default",
@@ -42,7 +54,8 @@ animations = [{
 script = ExtResource("1_hw01c")
 id = ""
 damagedImage = SubResource("SpriteFrames_ciqdd")
-repairedImage = SubResource("SpriteFrames_0q4al")
-failedImage = SubResource("SpriteFrames_5wkd2")
+tapeImage = SubResource("SpriteFrames_0q4al")
+kissImage = SubResource("SpriteFrames_5wkd2")
+whackImage = SubResource("SpriteFrames_utwp1")
 solution = Array[int]([0, 1])
 metadata/_custom_type_script = "uid://bukmyuebwoyh7"

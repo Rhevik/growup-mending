@@ -48,12 +48,10 @@ func ChallengeIntro():
 	
 func ChallengeOuttroSuccess():
 	successMusic.play();
-	SetSpriteFrames(challenge.repairedImage)
 	await get_tree().create_timer(2.25).timeout
 	
 func ChallengeOuttroFail():
 	failMusic.play();
-	SetSpriteFrames(challenge.failedImage)
 	print("Challenge Fail")
 	await get_tree().create_timer(2.25).timeout
 	print("Challenge Fail End")
@@ -78,9 +76,12 @@ func DidPlayerSucceedChallenge(result) -> bool:
 
 func press_kiss():
 	solution = Challenge.AcceptedSolutions.KISS
+	SetSpriteFrames(challenge.kissImage)
 
 func press_whack():
 	solution = Challenge.AcceptedSolutions.WHACK
+	SetSpriteFrames(challenge.whackImage)
 
 func press_tape():
 	solution = Challenge.AcceptedSolutions.TAPE
+	SetSpriteFrames(challenge.tapeImage)
