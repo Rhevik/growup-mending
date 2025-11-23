@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://uqc7vo7b28q0"]
+[gd_scene load_steps=7 format=3 uid="uid://uqc7vo7b28q0"]
 
 [ext_resource type="Script" uid="uid://byyy6h84cnb7s" path="res://GameManager/game_manager.gd" id="1_p13vs"]
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="2_qmfre"]
 [ext_resource type="PackedScene" uid="uid://cts82vqplkhxn" path="res://ChallengeDirector/challenge_director.tscn" id="2_v4rul"]
+[ext_resource type="Resource" uid="uid://xftevqf358xg" path="res://Tests/ChallengeTest.tres" id="3_jhjwp"]
+[ext_resource type="Resource" uid="uid://bpcm8tx86dnrl" path="res://Tests/ChallengeTest_2.tres" id="4_hoh1d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p13vs"]
 
 [node name="GameManager" type="Node" node_paths=PackedStringArray("Director")]
 script = ExtResource("1_p13vs")
+AllChallenges = Array[ExtResource("2_qmfre")]([ExtResource("3_jhjwp"), ExtResource("4_hoh1d")])
 Director = NodePath("ChallengeDirector")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

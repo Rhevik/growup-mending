@@ -27,5 +27,8 @@ func press_tape():
 	attempt_solution(Challenge.AcceptedSolutions.TAPE)
 
 func run_challenge():
+	print ("running challenge")
 	await Director.StartChallenge(CurrentChallenge)
+	print ("ending challenge")
+	select_next_challenge()
 	
