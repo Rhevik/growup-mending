@@ -23,20 +23,20 @@ func StartChallenge(newChallenge):
 		await ChallengeOuttroSuccess();
 	else:
 		await ChallengeOuttroFail();
-	print("Challenge End")
+	Log.m("Challenge End")
 	
 func SetSpriteFrames(given_frames: SpriteFrames):
-	print("Setting TV frame to: " + given_frames.resource_path)
+	Log.m("Setting TV frame to: " + given_frames.resource_path)
 	tvSprite.sprite_frames = given_frames
 	var backing_size = tvBacking.texture.get_size()
 	var tv_size = tvSprite.sprite_frames.get_frame_texture(tvSprite.animation, tvSprite.frame).get_size()
 	var x = max(backing_size.x, tv_size.x)
 	var y = max(backing_size.y, tv_size.y)
 	renderViewport.size = Vector2(x, y)
-	print("Setting the subviewport to the size: " + str(x) + ", " + str(y))
+	#Log.m("Setting the subviewport to the size: " + str(x) + ", " + str(y))
 	
 func ChallengeIntro():
-	print("Intro")
+	Log.m("Intro")
 	introTimer = get_node("IntroTimer")
 	introTimer.start()
 	tvStatic.play();
@@ -53,12 +53,12 @@ func ChallengeOuttroSuccess():
 	
 func ChallengeOuttroFail():
 	failMusic.play();
-	print("Challenge Fail")
+	Log.m("Challenge Fail")
 	await get_tree().create_timer(2.25).timeout
-	print("Challenge Fail End")
+	Log.m("Challenge Fail End")
 	
 func ChallengeGame() -> Challenge.AcceptedSolutions:
-	print("Game")
+	Log.m("Game")
 	challengeTimer = get_node("ChallengeTimer")
 	challengeTimer.start()
 
@@ -69,10 +69,11 @@ func ChallengeGame() -> Challenge.AcceptedSolutions:
 	return solution
 
 func DidPlayerSucceedChallenge(result) -> bool:
-	print("Succeed?")
 	if (challenge.solution.has(result)):
+		Log.m("Success!")
 		return true
 	else:
+		Log.m("Failed!")
 		return false
 
 func press_kiss():

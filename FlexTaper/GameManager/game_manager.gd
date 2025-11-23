@@ -13,14 +13,15 @@ func _ready():
 func select_next_challenge():
 	CurrentChallenge = AllChallenges[_ChallengeIndex]
 	_ChallengeIndex += 1
-	if (_ChallengeIndex == AllChallenges.size()-1):
+	if (_ChallengeIndex >= AllChallenges.size()):
+		Log.m("shuffled challenges")
 		_ChallengeIndex = 0
 		AllChallenges.shuffle()
 	await run_challenge()
 
 func run_challenge():
-	print ("running challenge")
+	Log.m ("running challenge")
 	await Director.StartChallenge(CurrentChallenge)
-	print ("ending challenge")
+	Log.m ("ending challenge")
 	select_next_challenge()
 	
