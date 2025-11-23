@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Challenge" load_steps=8 format=3 uid="uid://m2so6hxtbnp1"]
+[gd_resource type="Resource" script_class="Challenge" load_steps=8 format=3 uid="uid://cidyxp6paqmmu"]
 
 [ext_resource type="Texture2D" uid="uid://dbvc6bprhvnoc" path="res://Art/Fridge/fridge_broken.png" id="1_0rnbh"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_yv2r2"]

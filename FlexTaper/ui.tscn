@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://p8tqar06ajck" path="res://Assets/UI/pressed_tape.png" id="7_n5rqp"]
 [ext_resource type="Texture2D" uid="uid://dd3808dck2nl7" path="res://Assets/UI/unpressed_kiss.png" id="8_gs482"]
 [ext_resource type="Texture2D" uid="uid://c0xbfdvvcxwoo" path="res://Assets/UI/pressed_kiss.png" id="9_cxd00"]
-[ext_resource type="Resource" uid="uid://m2so6hxtbnp1" path="res://Challenges/Fridge.tres" id="9_etlur"]
+[ext_resource type="Resource" uid="uid://cidyxp6paqmmu" path="res://Challenges/Fridge.tres" id="9_etlur"]
 [ext_resource type="Texture2D" uid="uid://clghys13gb376" path="res://Assets/UI/unpressed_punch.png" id="10_etlur"]
 [ext_resource type="Texture2D" uid="uid://brr7lswttw38" path="res://Assets/UI/pressed_punch.png" id="11_7rqds"]
 
@@ -38,27 +38,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -472.0
+offset_left = -511.0
 offset_top = -463.0
 offset_right = 544.0
-offset_bottom = 438.0
+offset_bottom = 247.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("ViewportTexture_e2l4f")
-expand_mode = 2
 stretch_mode = 3
 
 [node name="SubViewport" type="SubViewport" parent="."]
-size = Vector2i(1982, 1052)
+size = Vector2i(760, 606)
 
 [node name="Backing" type="Sprite2D" parent="SubViewport"]
-position = Vector2(965.21, 500)
-scale = Vector2(1.75, 1.75)
 texture = ExtResource("2_cxd00")
+centered = false
 
 [node name="TelevisionAnimation" type="AnimatedSprite2D" parent="SubViewport"]
-position = Vector2(950, 402.045)
 sprite_frames = SubResource("SpriteFrames_7rqds")
+centered = false
 
 [node name="MainScreen" type="Sprite2D" parent="."]
 texture = ExtResource("1_ibotj")
@@ -67,8 +65,10 @@ centered = false
 [node name="GameManager" parent="." instance=ExtResource("1_fyqef")]
 AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("3_ibotj"), ExtResource("9_etlur")])
 
-[node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("tvSprite")]
+[node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("tvSprite", "tvBacking", "renderViewport")]
 tvSprite = NodePath("../../SubViewport/TelevisionAnimation")
+tvBacking = NodePath("../../SubViewport/Backing")
+renderViewport = NodePath("../../SubViewport")
 
 [node name="ActionButtons" type="Node" parent="."]
 
