@@ -44,5 +44,5 @@ id = "fridge"
 damagedImage = SubResource("SpriteFrames_wvb7l")
 repairedImage = SubResource("SpriteFrames_t310j")
 failedImage = SubResource("SpriteFrames_738b4")
-solution = Array[int]([])
+solution = Array[int]([0, 1])
 metadata/_custom_type_script = "uid://bukmyuebwoyh7"

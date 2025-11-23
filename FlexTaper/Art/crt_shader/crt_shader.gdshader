@@ -1,5 +1,5 @@
 // sourced from https://www.shadertoy.com/user/Gaktan
-//This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. 
+//This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
 
 shader_type canvas_item;
 
@@ -29,7 +29,7 @@ float verticalBar(float pos, float uvY, float offset) {
 
 void fragment() {
     vec2 uv = UV;
-    
+
     for (float i = 0.0; i < 0.71; i += 0.1313)
     {
         float d = mod(TIME * -i, 1.7);
@@ -37,7 +37,7 @@ void fragment() {
     	o *= offsetIntensity;
         uv.x += verticalBar(d, uv.y, o);
     }
-    
+
     float uvY = uv.y;
     uvY *= noiseQuality;
     uvY = float(int(uvY)) * (1.0 / noiseQuality);
@@ -46,7 +46,7 @@ void fragment() {
 
     vec2 offsetR = vec2(0.006 * sin(TIME), 0.0) * colorOffsetIntensity;
     vec2 offsetG = vec2(0.0073 * (cos(TIME * 0.97)), 0.0) * colorOffsetIntensity;
-    
+
     float r = texture(TEXTURE, uv + offsetR).r;
     float g = texture(TEXTURE, uv + offsetG).g;
     float b = texture(TEXTURE, uv).b;

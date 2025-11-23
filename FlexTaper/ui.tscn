@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=18 format=3 uid="uid://cmfsyjxq6uh86"]
 
 [ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
@@ -6,10 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://dwl4ltjrgktq" path="res://Art/bg_winstate.png" id="2_cxd00"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="2_nltto"]
 [ext_resource type="Texture2D" uid="uid://dbvc6bprhvnoc" path="res://Art/Fridge/fridge_broken.png" id="3_etlur"]
-[ext_resource type="Resource" uid="uid://xftevqf358xg" path="res://Tests/ChallengeTest.tres" id="3_ibotj"]
 [ext_resource type="Texture2D" uid="uid://bel5g0w63rwrq" path="res://Assets/UI/unpressed_tape.png" id="6_e2l4f"]
 [ext_resource type="Texture2D" uid="uid://p8tqar06ajck" path="res://Assets/UI/pressed_tape.png" id="7_n5rqp"]
+[ext_resource type="Resource" uid="uid://bhmev0da5a0as" path="res://Challenges/Pants.tres" id="8_etlur"]
 [ext_resource type="Texture2D" uid="uid://dd3808dck2nl7" path="res://Assets/UI/unpressed_kiss.png" id="8_gs482"]
+[ext_resource type="Resource" uid="uid://c5xel5w58f8ri" path="res://Challenges/Stuffy.tres" id="9_7rqds"]
 [ext_resource type="Texture2D" uid="uid://c0xbfdvvcxwoo" path="res://Assets/UI/pressed_kiss.png" id="9_cxd00"]
 [ext_resource type="Resource" uid="uid://cidyxp6paqmmu" path="res://Challenges/Fridge.tres" id="9_etlur"]
 [ext_resource type="Texture2D" uid="uid://clghys13gb376" path="res://Assets/UI/unpressed_punch.png" id="10_etlur"]
@@ -63,7 +64,7 @@ texture = ExtResource("1_ibotj")
 centered = false
 
 [node name="GameManager" parent="." instance=ExtResource("1_fyqef")]
-AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("3_ibotj"), ExtResource("9_etlur")])
+AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("9_etlur"), ExtResource("8_etlur"), ExtResource("9_7rqds")])
 
 [node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("tvSprite", "tvBacking", "renderViewport")]
 tvSprite = NodePath("../../SubViewport/TelevisionAnimation")
