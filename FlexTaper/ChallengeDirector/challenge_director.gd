@@ -18,8 +18,10 @@ var _solutionAllowed: bool
 
 func StartChallenge(newChallenge):
 	challenge = newChallenge
+	shuffle_buttons()
 	await ChallengeIntro()
 	var answer = await ChallengeGame()
+	disable_buttons(true)
 	
 	introMusic.stop();
 	var r = null;
@@ -103,6 +105,19 @@ func disable_buttons(disabled):
 	buttonContainerNode.visible = not disabled
 	_solutionAllowed = not disabled
 	
+func shuffle_buttons():
+	var buttons: Array[TextureButton] = []
+	buttons.assign(buttonContainerNode.get_children(false))
+	var positions: Array[Vector2] = []
+	for i in range(buttons.size()):
+		positions.append(buttons[i].position)
+		
+	positions.shuffle()
+	
+	for i in range(buttons.size()):
+		buttons[i].position = positions[i]
+		
+	
 func ProcessChallengeResult(result : ChallengeResult):
 	SetSpriteFrames(result.resultImage);
 	
@@ -110,3 +125,12 @@ func ProcessChallengeResult(result : ChallengeResult):
 		await ChallengeOuttroSuccess();
 	else:
 		await ChallengeOuttroFail();
+
+func hide_buttons():
+	_solutionAllowed = false
+	for button : BaseButton in buttonContainerNode.get_children():
+		button.visible = false
+		
+func show_buttons():
+	for button : BaseButton in buttonContainerNode.get_children():
+		button.visible = true

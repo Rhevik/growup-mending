@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Challenge" load_steps=14 format=3 uid="uid://f2uo17uqckcc"]
+[gd_resource type="Resource" script_class="Challenge" load_steps=14 format=3 uid="uid://unscj08ajx6i"]
 
 [ext_resource type="Texture2D" uid="uid://chrayuonxsk86" path="res://Art/Van/van_broken.png" id="1_1o5uf"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_gvtap"]

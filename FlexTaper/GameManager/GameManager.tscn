@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cts82vqplkhxn" path="res://ChallengeDirector/challenge_director.tscn" id="2_v4rul"]
 [ext_resource type="Resource" uid="uid://cjrb2mriy46ou" path="res://Challenges/Business.tres" id="3_6wl2n"]
 [ext_resource type="Resource" uid="uid://cidyxp6paqmmu" path="res://Challenges/Fridge.tres" id="4_tb2wi"]
-[ext_resource type="Resource" uid="uid://bsx2lab7qmc3u" path="res://Challenges/Jukebox.tres" id="5_nhcvl"]
+[ext_resource type="Resource" uid="uid://baj6rf6l2d02j" path="res://Challenges/Jukebox.tres" id="5_nhcvl"]
 [ext_resource type="Resource" uid="uid://ecyd6nnj5ell" path="res://Challenges/Pants.tres" id="6_dfcdp"]
 [ext_resource type="Resource" uid="uid://bmli5p475xt5y" path="res://Challenges/Stuffy.tres" id="7_acnmt"]
 [ext_resource type="PackedScene" uid="uid://rrhsv7hxmraf" path="res://Credits/credits.tscn" id="9_tb2wi"]
@@ -98,4 +98,3 @@ pivot_offset = Vector2(0.5, 0.5)
 libraries = {
 &"": SubResource("AnimationLibrary_dfcdp")
 }
-autoplay = "creditsappear"
