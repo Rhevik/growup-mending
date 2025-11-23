@@ -23,6 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://bu7ld1vtpf3sv" path="res://Art/StaticVideoFrames/ezgif-frame-003.jpg" id="13_75fsn"]
 [ext_resource type="Texture2D" uid="uid://ymavjdberm2e" path="res://Art/StaticVideoFrames/ezgif-frame-004.jpg" id="14_1xskv"]
 [ext_resource type="Texture2D" uid="uid://cgo5jylm5moqa" path="res://Art/StaticVideoFrames/ezgif-frame-005.jpg" id="15_cb22p"]
+[ext_resource type="Resource" uid="uid://bsx2lab7qmc3u" path="res://Challenges/Jukebox.tres" id="12_sosvr"]
+[ext_resource type="Resource" uid="uid://f2uo17uqckcc" path="res://Challenges/Van.tres" id="13_ndy3v"]
 [ext_resource type="AudioStream" uid="uid://btrq7t2dpeuca" path="res://Assets/Sound/Electro - 2013.wav" id="16_7rqds"]
 [ext_resource type="Texture2D" uid="uid://c2y2s2hwft4s7" path="res://Art/StaticVideoFrames/ezgif-frame-006.jpg" id="16_oqxfb"]
 [ext_resource type="Texture2D" uid="uid://b26xdpy33yc8h" path="res://Art/StaticVideoFrames/ezgif-frame-007.jpg" id="17_yrl65"]
@@ -271,6 +273,7 @@ sprite_frames = SubResource("SpriteFrames_7rqds")
 centered = false
 
 [node name="Static" type="Sprite2D" parent="SubViewport"]
+visible = false
 position = Vector2(360, 300)
 scale = Vector2(2.15, 2.15)
 texture = ExtResource("2_gs482")
@@ -286,7 +289,7 @@ texture = ExtResource("1_ibotj")
 centered = false
 
 [node name="GameManager" parent="." node_paths=PackedStringArray("Intro") instance=ExtResource("1_fyqef")]
-AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("9_etlur"), ExtResource("8_etlur"), ExtResource("9_7rqds"), ExtResource("11_nvb2n")])
+AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("9_etlur"), ExtResource("8_etlur"), ExtResource("9_7rqds"), ExtResource("11_nvb2n"), ExtResource("12_sosvr"), ExtResource("13_ndy3v")])
 Intro = NodePath("IntroNode")
 
 [node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("tvSprite", "tvBacking", "staticTv", "renderViewport", "buttonContainerNode")]
