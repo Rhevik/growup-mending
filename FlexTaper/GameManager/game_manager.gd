@@ -1,14 +1,16 @@
+class_name GameManager
 extends Node
 
 @export var AllChallenges: Array[Challenge]
 @export var CurrentChallenge: Challenge
 @export var Director: ChallengeDirector
+@export var Intro: IntroNode
 var _ChallengeIndex: int
 
 func _ready():
 	AllChallenges.shuffle()
 	_ChallengeIndex = 0;
-	select_next_challenge()
+	Intro.StartIntro(self)
 
 func select_next_challenge():
 	CurrentChallenge = AllChallenges[_ChallengeIndex]
