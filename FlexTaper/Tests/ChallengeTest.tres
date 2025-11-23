@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="Challenge" load_steps=8 format=3 uid="uid://xftevqf358xg"]
+
+[ext_resource type="Texture2D" uid="uid://bd82ef3d8fis6" path="res://Tests/test_arguing_challenge.png" id="1_77mdl"]
+[ext_resource type="Texture2D" uid="uid://b7rv5qnhvett8" path="res://Tests/test_arguing_fail.png" id="2_cy55b"]
+[ext_resource type="Texture2D" uid="uid://be67sc0u8pu3h" path="res://Tests/test_arguing_success.png" id="3_u7yv6"]
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="4_hct3a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ul0m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_77mdl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2kaw1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cy55b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hf1l4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u7yv6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("4_hct3a")
+id = "argument"
+damagedImage = SubResource("SpriteFrames_0ul0m")
+repairedImage = SubResource("SpriteFrames_hf1l4")
+failedImage = SubResource("SpriteFrames_2kaw1")
+solution = Array[int]([0, 1])
