@@ -1,16 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://uqc7vo7b28q0"]
+[gd_scene load_steps=10 format=3 uid="uid://uqc7vo7b28q0"]
 
 [ext_resource type="Script" uid="uid://byyy6h84cnb7s" path="res://GameManager/game_manager.gd" id="1_p13vs"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="2_qmfre"]
 [ext_resource type="PackedScene" uid="uid://cts82vqplkhxn" path="res://ChallengeDirector/challenge_director.tscn" id="2_v4rul"]
-[ext_resource type="Resource" uid="uid://xftevqf358xg" path="res://Tests/ChallengeTest.tres" id="3_jhjwp"]
-[ext_resource type="Resource" uid="uid://bpcm8tx86dnrl" path="res://Tests/ChallengeTest_2.tres" id="4_hoh1d"]
+[ext_resource type="Resource" uid="uid://cjrb2mriy46ou" path="res://Challenges/Business.tres" id="3_6wl2n"]
+[ext_resource type="Resource" uid="uid://cidyxp6paqmmu" path="res://Challenges/Fridge.tres" id="4_tb2wi"]
+[ext_resource type="Resource" uid="uid://bsx2lab7qmc3u" path="res://Challenges/Jukebox.tres" id="5_nhcvl"]
+[ext_resource type="Resource" uid="uid://ecyd6nnj5ell" path="res://Challenges/Pants.tres" id="6_dfcdp"]
+[ext_resource type="Resource" uid="uid://bmli5p475xt5y" path="res://Challenges/Stuffy.tres" id="7_acnmt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p13vs"]
 
 [node name="GameManager" type="Node" node_paths=PackedStringArray("Director")]
 script = ExtResource("1_p13vs")
-AllChallenges = Array[ExtResource("2_qmfre")]([ExtResource("3_jhjwp"), ExtResource("4_hoh1d")])
+AllChallenges = Array[ExtResource("2_qmfre")]([ExtResource("3_6wl2n"), ExtResource("4_tb2wi"), ExtResource("5_nhcvl"), ExtResource("6_dfcdp"), ExtResource("7_acnmt")])
 Director = NodePath("ChallengeDirector")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

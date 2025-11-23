@@ -7,17 +7,17 @@
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="2_nltto"]
 [ext_resource type="Texture2D" uid="uid://bel5g0w63rwrq" path="res://Assets/UI/unpressed_tape.png" id="6_e2l4f"]
 [ext_resource type="Texture2D" uid="uid://p8tqar06ajck" path="res://Assets/UI/pressed_tape.png" id="7_n5rqp"]
-[ext_resource type="Resource" uid="uid://dr3r6isy4sers" path="res://Challenges/Pants.tres" id="8_etlur"]
+[ext_resource type="Resource" uid="uid://ecyd6nnj5ell" path="res://Challenges/Pants.tres" id="8_etlur"]
 [ext_resource type="Texture2D" uid="uid://dd3808dck2nl7" path="res://Assets/UI/unpressed_kiss.png" id="8_gs482"]
-[ext_resource type="Resource" uid="uid://1sgnm76pgplp" path="res://Challenges/Stuffy.tres" id="9_7rqds"]
+[ext_resource type="Resource" uid="uid://bmli5p475xt5y" path="res://Challenges/Stuffy.tres" id="9_7rqds"]
 [ext_resource type="Texture2D" uid="uid://c0xbfdvvcxwoo" path="res://Assets/UI/pressed_kiss.png" id="9_cxd00"]
 [ext_resource type="Resource" uid="uid://cidyxp6paqmmu" path="res://Challenges/Fridge.tres" id="9_etlur"]
 [ext_resource type="Texture2D" uid="uid://clghys13gb376" path="res://Assets/UI/unpressed_punch.png" id="10_etlur"]
 [ext_resource type="Texture2D" uid="uid://brr7lswttw38" path="res://Assets/UI/pressed_punch.png" id="11_7rqds"]
-[ext_resource type="Resource" uid="uid://bll1f68qg5htk" path="res://Challenges/Business.tres" id="11_nvb2n"]
+[ext_resource type="Resource" uid="uid://cjrb2mriy46ou" path="res://Challenges/Business.tres" id="11_nvb2n"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e2l4f"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath(".")
 
 [node name="UI" type="Node"]
 

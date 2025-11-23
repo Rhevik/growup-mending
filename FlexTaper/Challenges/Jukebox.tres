@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Challenge" load_steps=10 format=3 uid="uid://davqgqag76n76"]
+[gd_resource type="Resource" script_class="Challenge" load_steps=14 format=3 uid="uid://bsx2lab7qmc3u"]
 
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_2qngj"]
 [ext_resource type="Texture2D" uid="uid://dxgq8lsxeeqnq" path="res://Art/Jukebox/jukebox.png" id="1_8ae3y"]
 [ext_resource type="Texture2D" uid="uid://da6676dh5lfde" path="res://Art/Jukebox/jukebox kiss.png" id="2_2nemh"]
+[ext_resource type="Script" uid="uid://whd152x28tog" path="res://Challenges/challengeResult.gd" id="3_ijty6"]
 [ext_resource type="Texture2D" uid="uid://cyficlfuyfrl7" path="res://Art/Jukebox/jukebox patch.png" id="3_wnt16"]
 [ext_resource type="Texture2D" uid="uid://3fomuauemm51" path="res://Art/Jukebox/jukebox hit.png" id="5_1pbsj"]
 
@@ -17,7 +18,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_1pbsj"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_b7ed5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -28,7 +29,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_2nemh"]
+[sub_resource type="Resource" id="Resource_xxec3"]
+script = ExtResource("3_ijty6")
+resultImage = SubResource("SpriteFrames_b7ed5")
+goodResult = false
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7rmk3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -39,7 +46,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ijty6"]
+[sub_resource type="Resource" id="Resource_l5jol"]
+script = ExtResource("3_ijty6")
+resultImage = SubResource("SpriteFrames_7rmk3")
+goodResult = true
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rv5cj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -50,12 +63,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Resource" id="Resource_ckmui"]
+script = ExtResource("3_ijty6")
+resultImage = SubResource("SpriteFrames_rv5cj")
+goodResult = true
+metadata/_custom_type_script = "uid://whd152x28tog"
+
 [resource]
 script = ExtResource("1_2qngj")
 id = ""
 damagedImage = SubResource("SpriteFrames_wnt16")
-tapeImage = SubResource("SpriteFrames_2nemh")
-kissImage = SubResource("SpriteFrames_1pbsj")
-whackImage = SubResource("SpriteFrames_ijty6")
-solution = Array[int]([])
+tapeResult = SubResource("Resource_l5jol")
+kissResult = SubResource("Resource_xxec3")
+whackResult = SubResource("Resource_ckmui")
 metadata/_custom_type_script = "uid://bukmyuebwoyh7"
