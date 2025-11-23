@@ -33,7 +33,8 @@ func StartChallenge(newChallenge):
 			r = challenge.kissResult
 			
 	if (r == null):
-		r = ChallengeResult.new(challenge.damagedImage, false) 
+		r = ChallengeResult.new()
+		r.init(challenge.damagedImage, false)
 			
 	await ProcessChallengeResult(r)
 	

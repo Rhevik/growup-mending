@@ -3,7 +3,7 @@
 [ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
 [ext_resource type="Texture2D" uid="uid://dnj252uwsuygs" path="res://Assets/UI/Flextape_UI.png" id="1_ibotj"]
-[ext_resource type="PackedScene" uid="uid://dpo520n0wmx1" path="res://sub_viewport.tscn" id="2_etlur"]
+[ext_resource type="PackedScene" path="res://sub_viewport.tscn" id="2_etlur"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="2_nltto"]
 [ext_resource type="Texture2D" uid="uid://bel5g0w63rwrq" path="res://Assets/UI/unpressed_tape.png" id="6_e2l4f"]
 [ext_resource type="Texture2D" uid="uid://p8tqar06ajck" path="res://Assets/UI/pressed_tape.png" id="7_n5rqp"]
@@ -18,7 +18,7 @@
 [ext_resource type="Resource" uid="uid://cjrb2mriy46ou" path="res://Challenges/Business.tres" id="11_nvb2n"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e2l4f"]
-viewport_path = NodePath(".")
+viewport_path = NodePath("SubViewport")
 
 [node name="UI" type="Node"]
 
@@ -39,6 +39,9 @@ texture = SubResource("ViewportTexture_e2l4f")
 stretch_mode = 3
 
 [node name="SubViewport" parent="." instance=ExtResource("2_etlur")]
+
+[node name="Static" parent="SubViewport" index="2"]
+visible = true
 
 [node name="AnimationPlayer" parent="SubViewport" index="3"]
 autoplay = "RESET"
