@@ -130,6 +130,12 @@ staticTv = NodePath("../../SubViewport/Static")
 renderViewport = NodePath("../../SubViewport")
 buttonContainerNode = NodePath("../../ActionButtons")
 
+[node name="Credits" parent="GameManager" index="2"]
+offset_left = -501.0
+offset_top = -113.0
+offset_right = -501.0
+offset_bottom = -113.0
+
 [node name="IntroNode" type="Node" parent="GameManager"]
 script = ExtResource("10_7rqds")
 

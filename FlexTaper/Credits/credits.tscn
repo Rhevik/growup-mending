@@ -1,0 +1,139 @@
+[gd_scene load_steps=4 format=3 uid="uid://rrhsv7hxmraf"]
+
+[sub_resource type="Gradient" id="Gradient_vlc7m"]
+offsets = PackedFloat32Array(0, 0.481229, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.762042, 0.121773, 0.768058, 1, 0, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jbgmt"]
+gradient = SubResource("Gradient_vlc7m")
+fill_from = Vector2(0.918803, 0.0854701)
+fill_to = Vector2(0.0555556, 0.952991)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6g23p"]
+gradient = SubResource("Gradient_vlc7m")
+fill_from = Vector2(0.166667, 0.153846)
+fill_to = Vector2(0.935897, 0.91453)
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 11.0
+offset_right = 8.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -145.0
+offset_top = -140.0
+offset_right = 154.0
+offset_bottom = 125.0
+texture = SubResource("GradientTexture2D_jbgmt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -137.0
+offset_top = -131.0
+offset_right = 141.0
+offset_bottom = 115.0
+texture = SubResource("GradientTexture2D_6g23p")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -125.0
+offset_top = -122.0
+offset_right = 81.0
+offset_bottom = -99.0
+text = "FLEX TAPE CAN'T FIX THAT!"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = -91.0
+offset_top = -66.0
+offset_right = -28.0
+offset_bottom = -43.0
+text = "WE ARE:"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = -114.0
+offset_top = -20.0
+offset_right = -56.0
+offset_bottom = 3.0
+text = "gordon"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = -40.0
+offset_top = -28.0
+offset_right = 26.0
+offset_bottom = -5.0
+text = "miranda"
+
+[node name="Label9" type="Label" parent="."]
+layout_mode = 0
+offset_left = -104.0
+offset_top = 27.0
+offset_right = -38.0
+offset_bottom = 50.0
+text = "caitlin"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 5.0
+offset_right = 22.0
+offset_bottom = 28.0
+text = "ben"
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -60.0
+offset_right = 73.0
+offset_bottom = -37.0
+text = "maggie"
+
+[node name="Label11" type="Label" parent="."]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 35.0
+offset_right = 34.0
+offset_bottom = 58.0
+text = "patrick"
+
+[node name="Label8" type="Label" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 15.0
+offset_right = 92.0
+offset_bottom = 38.0
+text = "shahriar"
+
+[node name="Label10" type="Label" parent="."]
+layout_mode = 0
+offset_left = -102.0
+offset_top = 78.0
+offset_right = 6.0
+offset_bottom = 101.0
+text = "music by skye"
+
+[node name="Label12" type="Label" parent="."]
+layout_mode = 0
+offset_left = -102.0
+offset_top = 78.0
+offset_right = 6.0
+offset_bottom = 101.0
+text = "music by skye"
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = -24.0
+offset_right = 113.0
+offset_bottom = 5.0
+text = "matt"
