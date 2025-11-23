@@ -1,14 +1,9 @@
 [gd_resource type="Resource" script_class="Challenge" load_steps=14 format=3 uid="uid://baj6rf6l2d02j"]
 
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_2qngj"]
-[ext_resource type="Texture2D" uid="uid://dxgq8lsxeeqnq" path="res://Art/Jukebox/jukebox.png" id="1_8ae3y"]
-[ext_resource type="Texture2D" uid="uid://da6676dh5lfde" path="res://Art/Jukebox/jukebox kiss.png" id="2_2nemh"]
-[ext_resource type="Script" path="res://Challenges/challengeResult.gd" id="3_ijty6"]
-[ext_resource type="Texture2D" uid="uid://cyficlfuyfrl7" path="res://Art/Jukebox/jukebox patch.png" id="3_wnt16"]
-[ext_resource type="Texture2D" uid="uid://3fomuauemm51" path="res://Art/Jukebox/jukebox hit.png" id="5_1pbsj"]
 [ext_resource type="Texture2D" uid="uid://dld7tf3s0x1pa" path="res://Art/Jukebox/Regular Jukebox.png" id="1_ijty6"]
 [ext_resource type="Texture2D" uid="uid://5gwc3louuy2d" path="res://Art/Jukebox/Blushing Jukebox.png" id="2_ijty6"]
-[ext_resource type="Script" uid="uid://whd152x28tog" path="res://Challenges/challengeResult.gd" id="3_ijty6"]
+[ext_resource type="Script" path="res://Challenges/challengeResult.gd" id="3_ijty6"]
 [ext_resource type="Texture2D" uid="uid://cly8nwq4uur3b" path="res://Art/Jukebox/Tape Jukebox.png" id="5_ijty6"]
 [ext_resource type="Texture2D" uid="uid://bnjfppt6bgkhe" path="res://Art/Jukebox/Smash Jukebox.png" id="6_ijty6"]
 
