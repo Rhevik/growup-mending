@@ -8,7 +8,9 @@ extends Node
 @export var successMusic: AudioStreamPlayer
 @export var failMusic: AudioStreamPlayer
 @export var tvSprite: AnimatedSprite2D
+@export var tvBacking: Sprite2D
 @export var staticTv: SpriteFrames
+@export var renderViewport: SubViewport
 var challenge: Challenge
 var solution: Challenge.AcceptedSolutions
 
@@ -23,25 +25,35 @@ func StartChallenge(newChallenge):
 		await ChallengeOuttroFail();
 	print("Challenge End")
 	
+func SetSpriteFrames(given_frames: SpriteFrames):
+	print("Setting TV frame to: " + given_frames.resource_path)
+	tvSprite.sprite_frames = given_frames
+	var backing_size = tvBacking.texture.get_size()
+	var tv_size = tvSprite.sprite_frames.get_frame_texture(tvSprite.animation, tvSprite.frame).get_size()
+	var x = max(backing_size.x, tv_size.x)
+	var y = max(backing_size.y, tv_size.y)
+	renderViewport.size = Vector2(x, y)
+	print("Setting the subviewport to the size: " + str(x) + ", " + str(y))
+	
 func ChallengeIntro():
 	print("Intro")
 	introTimer = get_node("IntroTimer")
 	introTimer.start()
 	tvStatic.play();
 	introMusic.play()
-	tvSprite.sprite_frames = staticTv
+	SetSpriteFrames(staticTv)
 	await introTimer.timeout
 	tvStatic.stop();
-	tvSprite.sprite_frames = challenge.damagedImage
+	SetSpriteFrames(challenge.damagedImage)
 	
 func ChallengeOuttroSuccess():
 	successMusic.play();
-	tvSprite.sprite_frames = challenge.repairedImage
+	SetSpriteFrames(challenge.repairedImage)
 	await get_tree().create_timer(2.25).timeout
 	
 func ChallengeOuttroFail():
 	failMusic.play();
-	tvSprite.sprite_frames = challenge.failedImage
+	SetSpriteFrames(challenge.failedImage)
 	print("Challenge Fail")
 	await get_tree().create_timer(2.25).timeout
 	print("Challenge Fail End")

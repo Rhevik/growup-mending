@@ -1,66 +1,62 @@
-[gd_scene load_steps=15 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=17 format=3 uid="uid://cmfsyjxq6uh86"]
 
+[ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
 [ext_resource type="Texture2D" uid="uid://dnj252uwsuygs" path="res://Assets/UI/Flextape_UI.png" id="1_ibotj"]
 [ext_resource type="Texture2D" uid="uid://dwl4ltjrgktq" path="res://Art/bg_winstate.png" id="2_cxd00"]
-[ext_resource type="Texture2D" uid="uid://dtgy6n76cpxu6" path="res://Art/Fridge/fridge_kiss.png" id="2_gs482"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="2_nltto"]
+[ext_resource type="Texture2D" uid="uid://dbvc6bprhvnoc" path="res://Art/Fridge/fridge_broken.png" id="3_etlur"]
 [ext_resource type="Resource" uid="uid://xftevqf358xg" path="res://Tests/ChallengeTest.tres" id="3_ibotj"]
 [ext_resource type="Texture2D" uid="uid://bel5g0w63rwrq" path="res://Assets/UI/unpressed_tape.png" id="6_e2l4f"]
 [ext_resource type="Texture2D" uid="uid://p8tqar06ajck" path="res://Assets/UI/pressed_tape.png" id="7_n5rqp"]
 [ext_resource type="Texture2D" uid="uid://dd3808dck2nl7" path="res://Assets/UI/unpressed_kiss.png" id="8_gs482"]
 [ext_resource type="Texture2D" uid="uid://c0xbfdvvcxwoo" path="res://Assets/UI/pressed_kiss.png" id="9_cxd00"]
-[ext_resource type="Resource" uid="uid://bfkup1rsqk5es" path="res://Challenges/Fridge.tres" id="9_etlur"]
+[ext_resource type="Resource" uid="uid://cidyxp6paqmmu" path="res://Challenges/Fridge.tres" id="9_etlur"]
 [ext_resource type="Texture2D" uid="uid://clghys13gb376" path="res://Assets/UI/unpressed_punch.png" id="10_etlur"]
 [ext_resource type="Texture2D" uid="uid://brr7lswttw38" path="res://Assets/UI/pressed_punch.png" id="11_7rqds"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_cxd00"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_e2l4f"]
 viewport_path = NodePath("SubViewport")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7rqds"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_etlur")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="UI" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 484.0
-offset_top = -67.0
-offset_right = 1484.0
-offset_bottom = 933.0
-texture = SubResource("ViewportTexture_cxd00")
+material = ExtResource("1_e2l4f")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -511.0
+offset_top = -463.0
+offset_right = 544.0
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_e2l4f")
+stretch_mode = 3
 
 [node name="SubViewport" type="SubViewport" parent="."]
-size = Vector2i(1000, 1000)
+size = Vector2i(760, 606)
 
-[node name="Control" type="Control" parent="SubViewport"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Backing" type="TextureRect" parent="SubViewport/Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -1.0
-offset_bottom = -1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Backing" type="Sprite2D" parent="SubViewport"]
 texture = ExtResource("2_cxd00")
-stretch_mode = 3
+centered = false
 
-[node name="Fridge" type="TextureRect" parent="SubViewport/Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_gs482")
-expand_mode = 2
-stretch_mode = 3
+[node name="TelevisionAnimation" type="AnimatedSprite2D" parent="SubViewport"]
+sprite_frames = SubResource("SpriteFrames_7rqds")
+centered = false
 
 [node name="MainScreen" type="Sprite2D" parent="."]
 texture = ExtResource("1_ibotj")
@@ -69,11 +65,10 @@ centered = false
 [node name="GameManager" parent="." instance=ExtResource("1_fyqef")]
 AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("3_ibotj"), ExtResource("9_etlur")])
 
-[node name="AnimatedSprite2D" parent="GameManager" index="0"]
-position = Vector2(-308, 699)
-
-[node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("tvSprite")]
-tvSprite = NodePath("")
+[node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("tvSprite", "tvBacking", "renderViewport")]
+tvSprite = NodePath("../../SubViewport/TelevisionAnimation")
+tvBacking = NodePath("../../SubViewport/Backing")
+renderViewport = NodePath("../../SubViewport")
 
 [node name="ActionButtons" type="Node" parent="."]
 
