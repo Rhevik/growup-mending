@@ -3,11 +3,12 @@ extends Node
 
 @export var introTimer: Timer
 @export var challengeTimer: Timer
+@export var tvStatic: AudioStreamPlayer
 @export var introMusic: AudioStreamPlayer
 @export var successMusic: AudioStreamPlayer
 @export var failMusic: AudioStreamPlayer
 @export var tvSprite: AnimatedSprite2D
-@export var fixItImage: SpriteFrames
+@export var staticTv: SpriteFrames
 var challenge: Challenge
 var solution: Challenge.AcceptedSolutions
 
@@ -26,19 +27,23 @@ func ChallengeIntro():
 	print("Intro")
 	introTimer = get_node("IntroTimer")
 	introTimer.start()
+	tvStatic.play();
 	introMusic.play()
+	tvSprite.sprite_frames = staticTv
+	await introTimer.timeout
+	tvStatic.stop();
 	tvSprite.sprite_frames = challenge.damagedImage
 	
 func ChallengeOuttroSuccess():
 	successMusic.play();
 	tvSprite.sprite_frames = challenge.repairedImage
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(2.25).timeout
 	
 func ChallengeOuttroFail():
 	failMusic.play();
 	tvSprite.sprite_frames = challenge.failedImage
 	print("Challenge Fail")
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(2.25).timeout
 	print("Challenge Fail End")
 	
 func ChallengeGame() -> Challenge.AcceptedSolutions:
