@@ -5,6 +5,7 @@ extends Node
 @export var CurrentChallenge: Challenge
 @export var Director: ChallengeDirector
 @export var Intro: IntroNode
+@export var CreditsThing: AnimationPlayer
 var _ChallengeIndex: int
 
 func _ready():

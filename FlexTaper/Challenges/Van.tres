@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_gvtap"]
 [ext_resource type="Texture2D" uid="uid://bs4wr77vs2mk2" path="res://Art/Van/van_kiss.png" id="2_jr8fl"]
 [ext_resource type="Texture2D" uid="uid://bvyrqb3hxjnjk" path="res://Art/Van/van_tape.png" id="3_wv2a2"]
-[ext_resource type="Script" uid="uid://whd152x28tog" path="res://Challenges/challengeResult.gd" id="4_jr8fl"]
+[ext_resource type="Script" path="res://Challenges/challengeResult.gd" id="4_jr8fl"]
 [ext_resource type="Texture2D" uid="uid://b2y4pn5ixgg3l" path="res://Art/Van/van_punch.png" id="6_vv8ca"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0s74p"]
