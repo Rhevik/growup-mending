@@ -21,6 +21,7 @@ func StartChallenge(newChallenge):
 	shuffle_buttons()
 	await ChallengeIntro()
 	var answer = await ChallengeGame()
+	disable_buttons(true)
 	
 	introMusic.stop();
 	var r = null;
