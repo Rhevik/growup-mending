@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=60 format=3 uid="uid://cmfsyjxq6uh86"]
 
 [ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
@@ -15,10 +15,179 @@
 [ext_resource type="Script" uid="uid://dcyldn1mbvra8" path="res://Intro/intro_node.gd" id="10_7rqds"]
 [ext_resource type="Texture2D" uid="uid://clghys13gb376" path="res://Assets/UI/unpressed_punch.png" id="10_etlur"]
 [ext_resource type="Texture2D" uid="uid://brr7lswttw38" path="res://Assets/UI/pressed_punch.png" id="11_7rqds"]
+[ext_resource type="Texture2D" uid="uid://bv8hkxc6mptdk" path="res://Art/StaticVideoFrames/ezgif-frame-001.jpg" id="11_11g2u"]
 [ext_resource type="Resource" uid="uid://cjrb2mriy46ou" path="res://Challenges/Business.tres" id="11_nvb2n"]
+[ext_resource type="Texture2D" uid="uid://b5kkovivf3shv" path="res://Art/StaticVideoFrames/ezgif-frame-002.jpg" id="12_5g28c"]
+[ext_resource type="Texture2D" uid="uid://bu7ld1vtpf3sv" path="res://Art/StaticVideoFrames/ezgif-frame-003.jpg" id="13_75fsn"]
+[ext_resource type="Texture2D" uid="uid://ymavjdberm2e" path="res://Art/StaticVideoFrames/ezgif-frame-004.jpg" id="14_1xskv"]
+[ext_resource type="Texture2D" uid="uid://cgo5jylm5moqa" path="res://Art/StaticVideoFrames/ezgif-frame-005.jpg" id="15_cb22p"]
+[ext_resource type="Texture2D" uid="uid://c2y2s2hwft4s7" path="res://Art/StaticVideoFrames/ezgif-frame-006.jpg" id="16_oqxfb"]
+[ext_resource type="Texture2D" uid="uid://b26xdpy33yc8h" path="res://Art/StaticVideoFrames/ezgif-frame-007.jpg" id="17_yrl65"]
+[ext_resource type="Texture2D" uid="uid://c1ul66hran5vx" path="res://Art/StaticVideoFrames/ezgif-frame-008.jpg" id="18_8fmno"]
+[ext_resource type="Texture2D" uid="uid://de8qlrxkb7da0" path="res://Art/StaticVideoFrames/ezgif-frame-009.jpg" id="19_ctsqr"]
+[ext_resource type="Texture2D" uid="uid://d37pqtylm6ddh" path="res://Art/StaticVideoFrames/ezgif-frame-010.jpg" id="20_2m7jo"]
+[ext_resource type="Texture2D" uid="uid://bj60tlq67kg7u" path="res://Art/StaticVideoFrames/ezgif-frame-011.jpg" id="21_bh67b"]
+[ext_resource type="Texture2D" uid="uid://cate3xud2tlaq" path="res://Art/StaticVideoFrames/ezgif-frame-012.jpg" id="22_sk3no"]
+[ext_resource type="Texture2D" uid="uid://tn8obucn2t3h" path="res://Art/StaticVideoFrames/ezgif-frame-013.jpg" id="23_4acw6"]
+[ext_resource type="Texture2D" uid="uid://bkkjikck7oe5l" path="res://Art/StaticVideoFrames/ezgif-frame-014.jpg" id="24_a0svk"]
+[ext_resource type="Texture2D" uid="uid://cinu2fldooiat" path="res://Art/StaticVideoFrames/ezgif-frame-015.jpg" id="25_488mo"]
+[ext_resource type="Texture2D" uid="uid://62ntl817lg2k" path="res://Art/StaticVideoFrames/ezgif-frame-016.jpg" id="26_lye28"]
+[ext_resource type="Texture2D" uid="uid://bjmmo51cmv4ls" path="res://Art/StaticVideoFrames/ezgif-frame-017.jpg" id="27_ydnvp"]
+[ext_resource type="Texture2D" uid="uid://do7sbdbb4k76d" path="res://Art/StaticVideoFrames/ezgif-frame-018.jpg" id="28_t5krv"]
+[ext_resource type="Texture2D" uid="uid://bynh5wgwcb3tf" path="res://Art/StaticVideoFrames/ezgif-frame-019.jpg" id="29_mof11"]
+[ext_resource type="Texture2D" uid="uid://dpo1xx1vfppne" path="res://Art/StaticVideoFrames/ezgif-frame-020.jpg" id="30_ro5vq"]
+[ext_resource type="Texture2D" uid="uid://doh31j5syoiqx" path="res://Art/StaticVideoFrames/ezgif-frame-021.jpg" id="31_uav4i"]
+[ext_resource type="Texture2D" uid="uid://xsbee5k6m4to" path="res://Art/StaticVideoFrames/ezgif-frame-022.jpg" id="32_jdeth"]
+[ext_resource type="Texture2D" uid="uid://c8yt7253e11g7" path="res://Art/StaticVideoFrames/ezgif-frame-023.jpg" id="33_fwnms"]
+[ext_resource type="Texture2D" uid="uid://iqjm8n5307vg" path="res://Art/StaticVideoFrames/ezgif-frame-024.jpg" id="34_4tc6v"]
+[ext_resource type="Texture2D" uid="uid://bayn7qnchokea" path="res://Art/StaticVideoFrames/ezgif-frame-025.jpg" id="35_3jqvb"]
+[ext_resource type="Texture2D" uid="uid://cd21t1jblwtag" path="res://Art/StaticVideoFrames/ezgif-frame-026.jpg" id="36_3rbo7"]
+[ext_resource type="Texture2D" uid="uid://enfq2djn0b5m" path="res://Art/StaticVideoFrames/ezgif-frame-027.jpg" id="37_dlkvg"]
+[ext_resource type="Texture2D" uid="uid://dougv1xisds8v" path="res://Art/StaticVideoFrames/ezgif-frame-028.jpg" id="38_ky4o2"]
+[ext_resource type="Texture2D" uid="uid://cqh1g71j68g" path="res://Art/StaticVideoFrames/ezgif-frame-029.jpg" id="39_fmjlm"]
+[ext_resource type="Texture2D" uid="uid://bmg0f1lm4rwc" path="res://Art/StaticVideoFrames/ezgif-frame-030.jpg" id="40_if46j"]
+[ext_resource type="Texture2D" uid="uid://bv0xpjhx140e" path="res://Art/StaticVideoFrames/ezgif-frame-031.jpg" id="41_51b3m"]
+[ext_resource type="Texture2D" uid="uid://020rxs5wfwry" path="res://Art/StaticVideoFrames/ezgif-frame-032.jpg" id="42_pgukk"]
+[ext_resource type="Texture2D" uid="uid://b42doe5grwmko" path="res://Art/StaticVideoFrames/ezgif-frame-033.jpg" id="43_k6s1b"]
+[ext_resource type="Texture2D" uid="uid://d3gnbfpwiyr8q" path="res://Art/StaticVideoFrames/ezgif-frame-034.jpg" id="44_hgt1t"]
+[ext_resource type="Texture2D" uid="uid://ckiwkdrxb75yh" path="res://Art/StaticVideoFrames/ezgif-frame-035.jpg" id="45_f4mau"]
+[ext_resource type="Texture2D" uid="uid://bgqrrrue8tcwu" path="res://Art/StaticVideoFrames/ezgif-frame-036.jpg" id="46_jyo83"]
+[ext_resource type="Texture2D" uid="uid://dve1vromxpsal" path="res://Art/StaticVideoFrames/ezgif-frame-037.jpg" id="47_knc46"]
+[ext_resource type="Texture2D" uid="uid://dmiejljjhndlo" path="res://Art/StaticVideoFrames/ezgif-frame-038.jpg" id="48_i8qiy"]
+[ext_resource type="Texture2D" uid="uid://bwmi5i8yx6hdp" path="res://Art/StaticVideoFrames/ezgif-frame-039.jpg" id="49_08cx6"]
+[ext_resource type="Texture2D" uid="uid://hr1igyt61v0o" path="res://Art/StaticVideoFrames/ezgif-frame-040.jpg" id="50_sw3u4"]
+[ext_resource type="Texture2D" uid="uid://clrparq3y58lu" path="res://Intro/start_button.png" id="51_5g28c"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e2l4f"]
 viewport_path = NodePath("SubViewport")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8iv75"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_11g2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5g28c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_75fsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1xskv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_cb22p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_oqxfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yrl65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8fmno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ctsqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2m7jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_bh67b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sk3no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_4acw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_a0svk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_488mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_lye28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ydnvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_t5krv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_mof11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ro5vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_uav4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_jdeth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_fwnms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_4tc6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_3jqvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_3rbo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_dlkvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ky4o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_fmjlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_if46j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_51b3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_pgukk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_k6s1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_hgt1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_f4mau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_jyo83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_knc46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_i8qiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_08cx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_sw3u4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="UI" type="Node"]
 
@@ -40,9 +209,6 @@ stretch_mode = 3
 
 [node name="SubViewport" parent="." instance=ExtResource("2_etlur")]
 
-[node name="Static" parent="SubViewport" index="2"]
-visible = true
-
 [node name="AnimationPlayer" parent="SubViewport" index="3"]
 autoplay = "RESET"
 
@@ -61,8 +227,24 @@ staticTv = NodePath("../../SubViewport/Static")
 renderViewport = NodePath("../../SubViewport")
 buttonContainerNode = NodePath("../../ActionButtons")
 
-[node name="IntroNode" type="Node" parent="GameManager"]
+[node name="IntroNode" type="Node" parent="GameManager" node_paths=PackedStringArray("IntroAnim", "StartButton")]
 script = ExtResource("10_7rqds")
+IntroAnim = NodePath("AnimatedSprite2D")
+StartButton = NodePath("StartButton")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GameManager/IntroNode"]
+z_index = -1
+position = Vector2(964, 542)
+sprite_frames = SubResource("SpriteFrames_8iv75")
+frame = 37
+frame_progress = 0.435181
+
+[node name="StartButton" type="TextureButton" parent="GameManager/IntroNode"]
+offset_left = 588.0
+offset_top = 451.0
+offset_right = 1367.0
+offset_bottom = 930.0
+texture_normal = ExtResource("51_5g28c")
 
 [node name="ActionButtons" type="Node" parent="."]
 
@@ -90,6 +272,7 @@ offset_bottom = 1034.0
 texture_normal = ExtResource("10_etlur")
 texture_pressed = ExtResource("11_7rqds")
 
+[connection signal="pressed" from="GameManager/IntroNode/StartButton" to="GameManager/IntroNode" method="StartGame"]
 [connection signal="pressed" from="ActionButtons/TapeButton" to="GameManager/ChallengeDirector" method="press_tape"]
 [connection signal="pressed" from="ActionButtons/KissButton" to="GameManager/ChallengeDirector" method="press_kiss"]
 [connection signal="pressed" from="ActionButtons/PunchButton" to="GameManager/ChallengeDirector" method="press_whack"]

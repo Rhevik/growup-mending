@@ -102,6 +102,7 @@ func press_tape():
 func disable_buttons(disabled):
 	_solutionAllowed = not disabled
 	
+
 func ProcessChallengeResult(result : ChallengeResult):
 	SetSpriteFrames(result.resultImage);
 	
@@ -109,3 +110,12 @@ func ProcessChallengeResult(result : ChallengeResult):
 		await ChallengeOuttroSuccess();
 	else:
 		await ChallengeOuttroFail();
+
+func hide_buttons():
+	_solutionAllowed = false
+	for button : BaseButton in buttonContainerNode.get_children():
+		button.visible = false
+		
+func show_buttons():
+	for button : BaseButton in buttonContainerNode.get_children():
+		button.visible = true
