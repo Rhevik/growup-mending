@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="Challenge" load_steps=10 format=3 uid="uid://1sgnm76pgplp"]
+[gd_resource type="Resource" script_class="Challenge" load_steps=14 format=3 uid="uid://bmli5p475xt5y"]
 
 [ext_resource type="Texture2D" uid="uid://b3me0npw2ucll" path="res://Art/Stuffy/stuffy_broken.png" id="1_5fv00"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_hw01c"]
 [ext_resource type="Texture2D" uid="uid://fhcv6tvh444e" path="res://Art/Stuffy/stuffy_punch.png" id="2_0q4al"]
 [ext_resource type="Texture2D" uid="uid://ckald8p4lc7ei" path="res://Art/Stuffy/stuffy_kiss.png" id="2_ciqdd"]
 [ext_resource type="Texture2D" uid="uid://l83rsg6aqo5l" path="res://Art/Stuffy/stuffy_tape.png" id="3_ciqdd"]
+[ext_resource type="Script" uid="uid://whd152x28tog" path="res://Challenges/challengeResult.gd" id="3_utwp1"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ciqdd"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_rto05"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -17,7 +18,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_5wkd2"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_f8p5r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -28,7 +29,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_0q4al"]
+[sub_resource type="Resource" id="Resource_suy0k"]
+script = ExtResource("3_utwp1")
+resultImage = SubResource("SpriteFrames_f8p5r")
+goodResult = true
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_883bw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -39,7 +46,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_utwp1"]
+[sub_resource type="Resource" id="Resource_afb17"]
+script = ExtResource("3_utwp1")
+resultImage = SubResource("SpriteFrames_883bw")
+goodResult = true
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_83qp7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -50,12 +63,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Resource" id="Resource_46qjl"]
+script = ExtResource("3_utwp1")
+resultImage = SubResource("SpriteFrames_83qp7")
+goodResult = false
+metadata/_custom_type_script = "uid://whd152x28tog"
+
 [resource]
 script = ExtResource("1_hw01c")
 id = ""
-damagedImage = SubResource("SpriteFrames_ciqdd")
-tapeImage = SubResource("SpriteFrames_0q4al")
-kissImage = SubResource("SpriteFrames_5wkd2")
-whackImage = SubResource("SpriteFrames_utwp1")
-solution = Array[int]([0, 1])
+damagedImage = SubResource("SpriteFrames_rto05")
+tapeResult = SubResource("Resource_afb17")
+kissResult = SubResource("Resource_suy0k")
+whackResult = SubResource("Resource_46qjl")
 metadata/_custom_type_script = "uid://bukmyuebwoyh7"

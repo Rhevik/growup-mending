@@ -20,11 +20,24 @@ func StartChallenge(newChallenge):
 	challenge = newChallenge
 	await ChallengeIntro()
 	var answer = await ChallengeGame()
+	
 	introMusic.stop();
-	if(DidPlayerSucceedChallenge(answer)):
-		await ChallengeOuttroSuccess();
-	else:
-		await ChallengeOuttroFail();
+	var r = null;
+	
+	match answer:
+		Challenge.AcceptedSolutions.TAPE:
+			r = challenge.tapeResult
+		Challenge.AcceptedSolutions.WHACK:
+			r = challenge.whackResult
+		Challenge.AcceptedSolutions.KISS:
+			r = challenge.kissResult
+			
+	if (r == null):
+		r = ChallengeResult.new()
+		r.init(challenge.damagedImage, false)
+			
+	await ProcessChallengeResult(r)
+	
 	Log.m("Challenge End")
 	
 func SetSpriteFrames(given_frames: SpriteFrames):
@@ -71,31 +84,28 @@ func ChallengeGame() -> Challenge.AcceptedSolutions:
 		
 	return solution
 
-func DidPlayerSucceedChallenge(result) -> bool:
-	if (challenge.solution.has(result)):
-		Log.m("Success!")
-		return true
-	else:
-		Log.m("Failed!")
-		return false
-
 func press_kiss():
 	if (_solutionAllowed):
 		solution = Challenge.AcceptedSolutions.KISS
-		SetSpriteFrames(challenge.kissImage)
 		disable_buttons(true)
 
 func press_whack():
 	if (_solutionAllowed):
 		solution = Challenge.AcceptedSolutions.WHACK
-		SetSpriteFrames(challenge.whackImage)
 		disable_buttons(true)
 
 func press_tape():
 	if (_solutionAllowed):
 		solution = Challenge.AcceptedSolutions.TAPE
-		SetSpriteFrames(challenge.tapeImage)
 		disable_buttons(true)
 	
 func disable_buttons(disabled):
 	_solutionAllowed = not disabled
+	
+func ProcessChallengeResult(result : ChallengeResult):
+	SetSpriteFrames(result.resultImage);
+	
+	if (result.goodResult):
+		await ChallengeOuttroSuccess();
+	else:
+		await ChallengeOuttroFail();
