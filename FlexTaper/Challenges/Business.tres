@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Challenge" load_steps=10 format=3 uid="uid://vgoi6a27stev"]
+[gd_resource type="Resource" script_class="Challenge" load_steps=10 format=3 uid="uid://bll1f68qg5htk"]
 
 [ext_resource type="Texture2D" uid="uid://cnlrlkjpkvd03" path="res://Art/Businessman/Broken Guy.png" id="1_2qxlx"]
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_vqu36"]

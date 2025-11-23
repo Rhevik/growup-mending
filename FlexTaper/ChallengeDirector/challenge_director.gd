@@ -11,6 +11,7 @@ extends Node
 @export var tvBacking: Sprite2D
 @export var staticTv: Sprite2D
 @export var renderViewport: SubViewport
+@export var buttonContainerNode: Node
 var challenge: Challenge
 var solution: Challenge.AcceptedSolutions
 
@@ -46,6 +47,7 @@ func ChallengeIntro():
 	tvStatic.stop();
 	staticTv.visible = false
 	SetSpriteFrames(challenge.damagedImage)
+	disable_buttons(false)
 	
 func ChallengeOuttroSuccess():
 	successMusic.play();
@@ -79,11 +81,18 @@ func DidPlayerSucceedChallenge(result) -> bool:
 func press_kiss():
 	solution = Challenge.AcceptedSolutions.KISS
 	SetSpriteFrames(challenge.kissImage)
+	disable_buttons(true)
 
 func press_whack():
 	solution = Challenge.AcceptedSolutions.WHACK
 	SetSpriteFrames(challenge.whackImage)
+	disable_buttons(true)
 
 func press_tape():
 	solution = Challenge.AcceptedSolutions.TAPE
 	SetSpriteFrames(challenge.tapeImage)
+	disable_buttons(true)
+	
+func disable_buttons(disabled):
+	for button : BaseButton in buttonContainerNode.get_children():
+		button.disabled = disabled
