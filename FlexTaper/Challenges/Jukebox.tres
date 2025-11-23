@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Challenge" load_steps=10 format=3 uid="uid://davqgqag76n76"]
+
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_2qngj"]
+[ext_resource type="Texture2D" uid="uid://dxgq8lsxeeqnq" path="res://Art/Jukebox/jukebox.png" id="1_8ae3y"]
+[ext_resource type="Texture2D" uid="uid://da6676dh5lfde" path="res://Art/Jukebox/jukebox kiss.png" id="2_2nemh"]
+[ext_resource type="Texture2D" uid="uid://cyficlfuyfrl7" path="res://Art/Jukebox/jukebox patch.png" id="3_wnt16"]
+[ext_resource type="Texture2D" uid="uid://3fomuauemm51" path="res://Art/Jukebox/jukebox hit.png" id="5_1pbsj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wnt16"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8ae3y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1pbsj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2nemh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2nemh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wnt16")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ijty6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1pbsj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_2qngj")
+id = ""
+damagedImage = SubResource("SpriteFrames_wnt16")
+tapeImage = SubResource("SpriteFrames_2nemh")
+kissImage = SubResource("SpriteFrames_1pbsj")
+whackImage = SubResource("SpriteFrames_ijty6")
+solution = Array[int]([])
+metadata/_custom_type_script = "uid://bukmyuebwoyh7"

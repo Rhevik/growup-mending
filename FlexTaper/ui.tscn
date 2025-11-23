@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=20 format=3 uid="uid://cmfsyjxq6uh86"]
 
 [ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://cidyxp6paqmmu" path="res://Challenges/Fridge.tres" id="9_etlur"]
 [ext_resource type="Texture2D" uid="uid://clghys13gb376" path="res://Assets/UI/unpressed_punch.png" id="10_etlur"]
 [ext_resource type="Texture2D" uid="uid://brr7lswttw38" path="res://Assets/UI/pressed_punch.png" id="11_7rqds"]
+[ext_resource type="Resource" uid="uid://vgoi6a27stev" path="res://Challenges/Business.tres" id="11_nvb2n"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e2l4f"]
 viewport_path = NodePath("SubViewport")
@@ -66,12 +67,14 @@ position = Vector2(360, 300)
 scale = Vector2(2.15, 2.15)
 texture = ExtResource("4_7rqds")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SubViewport"]
+
 [node name="MainScreen" type="Sprite2D" parent="."]
 texture = ExtResource("1_ibotj")
 centered = false
 
 [node name="GameManager" parent="." instance=ExtResource("1_fyqef")]
-AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("9_etlur"), ExtResource("8_etlur"), ExtResource("9_7rqds")])
+AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("9_etlur"), ExtResource("8_etlur"), ExtResource("9_7rqds"), ExtResource("11_nvb2n")])
 
 [node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("tvSprite", "tvBacking", "staticTv", "renderViewport")]
 tvSprite = NodePath("../../SubViewport/TelevisionAnimation")

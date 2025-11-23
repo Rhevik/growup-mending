@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Challenge" load_steps=10 format=3 uid="uid://vgoi6a27stev"]
+
+[ext_resource type="Texture2D" uid="uid://cnlrlkjpkvd03" path="res://Art/Businessman/Broken Guy.png" id="1_2qxlx"]
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_vqu36"]
+[ext_resource type="Texture2D" uid="uid://cqv2b64re7dme" path="res://Art/Businessman/Kiss Guy.png" id="2_gafm3"]
+[ext_resource type="Texture2D" uid="uid://bsdu5wwoi688g" path="res://Art/Businessman/Taped Guy.png" id="3_gafm3"]
+[ext_resource type="Texture2D" uid="uid://bxmshs56tswkd" path="res://Art/Businessman/Smash Guy.png" id="5_tbygl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tbygl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2qxlx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gbssy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gafm3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i5jxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gafm3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ouw3g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_tbygl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_vqu36")
+id = ""
+damagedImage = SubResource("SpriteFrames_tbygl")
+tapeImage = SubResource("SpriteFrames_i5jxp")
+kissImage = SubResource("SpriteFrames_gbssy")
+whackImage = SubResource("SpriteFrames_ouw3g")
+solution = Array[int]([])
+metadata/_custom_type_script = "uid://bukmyuebwoyh7"
