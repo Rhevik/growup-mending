@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Challenge" load_steps=14 format=3 uid="uid://da2ksjqo3pj0"]
+[gd_resource type="Resource" script_class="Challenge" load_steps=14 format=3 uid="uid://bttisemc147ms"]
 
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_263sr"]
 [ext_resource type="Texture2D" uid="uid://dtnbbyog58q3l" path="res://Art/Airplane/Airplane Regular.png" id="1_rchxm"]
 [ext_resource type="Texture2D" uid="uid://7uft3elwpffg" path="res://Art/Airplane/Airplane Kiss.png" id="2_6cw5i"]
 [ext_resource type="Texture2D" uid="uid://b1nk4rm1w50wh" path="res://Art/Airplane/Airplane Tape.png" id="3_8kiqt"]
-[ext_resource type="Script" uid="uid://whd152x28tog" path="res://Challenges/challengeResult.gd" id="4_6cw5i"]
+[ext_resource type="Script" path="res://Challenges/challengeResult.gd" id="4_6cw5i"]
 [ext_resource type="Texture2D" uid="uid://5ju8stscdinj" path="res://Art/Airplane/Airplane Punch.png" id="6_5ovx5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r3l00"]
