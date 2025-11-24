@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=71 format=3 uid="uid://cmfsyjxq6uh86"]
 
 [ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
@@ -26,7 +26,6 @@
 [ext_resource type="Texture2D" uid="uid://bu7ld1vtpf3sv" path="res://Art/StaticVideoFrames/ezgif-frame-003.jpg" id="13_75fsn"]
 [ext_resource type="Resource" uid="uid://unscj08ajx6i" path="res://Challenges/Van.tres" id="13_ndy3v"]
 [ext_resource type="Texture2D" uid="uid://ymavjdberm2e" path="res://Art/StaticVideoFrames/ezgif-frame-004.jpg" id="14_1xskv"]
-[ext_resource type="Resource" uid="uid://bttisemc147ms" path="res://Challenges/Airplane.tres" id="14_8fmno"]
 [ext_resource type="Texture2D" uid="uid://cgo5jylm5moqa" path="res://Art/StaticVideoFrames/ezgif-frame-005.jpg" id="15_cb22p"]
 [ext_resource type="AudioStream" uid="uid://btrq7t2dpeuca" path="res://Assets/Sound/Electro - 2013.wav" id="16_7rqds"]
 [ext_resource type="Texture2D" uid="uid://c2y2s2hwft4s7" path="res://Art/StaticVideoFrames/ezgif-frame-006.jpg" id="16_oqxfb"]
@@ -304,7 +303,7 @@ texture = ExtResource("1_ibotj")
 centered = false
 
 [node name="GameManager" parent="." node_paths=PackedStringArray("Intro", "CreditsThing") instance=ExtResource("1_fyqef")]
-AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("9_etlur"), ExtResource("8_etlur"), ExtResource("9_7rqds"), ExtResource("11_nvb2n"), ExtResource("12_sosvr"), ExtResource("13_ndy3v"), ExtResource("14_8fmno")])
+AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("9_etlur"), ExtResource("8_etlur"), ExtResource("9_7rqds"), ExtResource("11_nvb2n"), ExtResource("12_sosvr"), ExtResource("13_ndy3v")])
 Intro = NodePath("IntroNode")
 CreditsThing = NodePath("AnimationPlayer")
 
