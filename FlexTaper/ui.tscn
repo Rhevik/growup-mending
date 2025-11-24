@@ -318,6 +318,12 @@ staticTv = NodePath("../../SubViewport/Static")
 renderViewport = NodePath("../../SubViewport")
 buttonContainerNode = NodePath("../../ActionButtons")
 
+[node name="Success3" parent="GameManager/ChallengeDirector" index="7"]
+volume_db = 10.065
+
+[node name="Success4" parent="GameManager/ChallengeDirector" index="8"]
+volume_db = 5.34
+
 [node name="Credits" parent="GameManager" index="2"]
 offset_left = 26.0001
 offset_top = -128.0
@@ -381,6 +387,7 @@ texture_pressed = ExtResource("11_7rqds")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("16_7rqds")
+volume_db = -1.06
 autoplay = true
 
 [connection signal="pressed" from="GameManager/IntroNode/StartButton" to="GameManager/IntroNode" method="StartGame"]
