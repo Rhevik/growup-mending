@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://fhcv6tvh444e" path="res://Art/Stuffy/stuffy_punch.png" id="2_0q4al"]
 [ext_resource type="Texture2D" uid="uid://ckald8p4lc7ei" path="res://Art/Stuffy/stuffy_kiss.png" id="2_ciqdd"]
 [ext_resource type="Texture2D" uid="uid://l83rsg6aqo5l" path="res://Art/Stuffy/stuffy_tape.png" id="3_ciqdd"]
-[ext_resource type="Script" path="res://Challenges/challengeResult.gd" id="3_utwp1"]
+[ext_resource type="Script" uid="uid://whd152x28tog" path="res://Challenges/challengeResult.gd" id="3_utwp1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rto05"]
 animations = [{

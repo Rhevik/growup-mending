@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="Challenge" load_steps=14 format=3 uid="uid://da2ksjqo3pj0"]
+
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_263sr"]
+[ext_resource type="Texture2D" uid="uid://dtnbbyog58q3l" path="res://Art/Airplane/Airplane Regular.png" id="1_rchxm"]
+[ext_resource type="Texture2D" uid="uid://7uft3elwpffg" path="res://Art/Airplane/Airplane Kiss.png" id="2_6cw5i"]
+[ext_resource type="Texture2D" uid="uid://b1nk4rm1w50wh" path="res://Art/Airplane/Airplane Tape.png" id="3_8kiqt"]
+[ext_resource type="Script" uid="uid://whd152x28tog" path="res://Challenges/challengeResult.gd" id="4_6cw5i"]
+[ext_resource type="Texture2D" uid="uid://5ju8stscdinj" path="res://Art/Airplane/Airplane Punch.png" id="6_5ovx5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3l00"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rchxm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_66dqa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6cw5i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_ky4td"]
+script = ExtResource("4_6cw5i")
+resultImage = SubResource("SpriteFrames_66dqa")
+goodResult = false
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ovx5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8kiqt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_66dqa"]
+script = ExtResource("4_6cw5i")
+resultImage = SubResource("SpriteFrames_5ovx5")
+goodResult = true
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ky4td"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5ovx5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_n8nao"]
+script = ExtResource("4_6cw5i")
+resultImage = SubResource("SpriteFrames_ky4td")
+goodResult = false
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[resource]
+script = ExtResource("1_263sr")
+id = ""
+damagedImage = SubResource("SpriteFrames_r3l00")
+tapeResult = SubResource("Resource_66dqa")
+kissResult = SubResource("Resource_ky4td")
+whackResult = SubResource("Resource_n8nao")
+metadata/_custom_type_script = "uid://bukmyuebwoyh7"

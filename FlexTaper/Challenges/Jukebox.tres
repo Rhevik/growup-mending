@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_2qngj"]
 [ext_resource type="Texture2D" uid="uid://dld7tf3s0x1pa" path="res://Art/Jukebox/Regular Jukebox.png" id="1_ijty6"]
 [ext_resource type="Texture2D" uid="uid://5gwc3louuy2d" path="res://Art/Jukebox/Blushing Jukebox.png" id="2_ijty6"]
-[ext_resource type="Script" path="res://Challenges/challengeResult.gd" id="3_ijty6"]
+[ext_resource type="Script" uid="uid://whd152x28tog" path="res://Challenges/challengeResult.gd" id="3_ijty6"]
 [ext_resource type="Texture2D" uid="uid://cly8nwq4uur3b" path="res://Art/Jukebox/Tape Jukebox.png" id="5_ijty6"]
 [ext_resource type="Texture2D" uid="uid://bnjfppt6bgkhe" path="res://Art/Jukebox/Smash Jukebox.png" id="6_ijty6"]
 

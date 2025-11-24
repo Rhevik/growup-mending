@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="1_yv2r2"]
 [ext_resource type="Texture2D" uid="uid://dtgy6n76cpxu6" path="res://Art/Fridge/fridge_kiss.png" id="2_74jvu"]
 [ext_resource type="Texture2D" uid="uid://6dafbn0rjx4i" path="res://Art/Fridge/fridge_tape.png" id="3_0rnbh"]
-[ext_resource type="Script" path="res://Challenges/challengeResult.gd" id="3_t310j"]
+[ext_resource type="Script" uid="uid://whd152x28tog" path="res://Challenges/challengeResult.gd" id="3_t310j"]
 [ext_resource type="Texture2D" uid="uid://b526xse2x0j6k" path="res://Art/Fridge/Fridge MoreSmashed.png" id="6_t310j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_738b4"]
