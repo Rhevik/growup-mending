@@ -4,6 +4,7 @@ extends Node
 var GameManager: GameManager
 @export var IntroAnim: AnimatedSprite2D
 @export var StartButton: BaseButton
+@export var CreditsButton: BaseButton
 var creditsShowing: bool
 
 func StartIntro(manager):
@@ -24,6 +25,7 @@ func DisableIntro():
 	for child in get_children():
 		child.visible = false
 	StartButton.disabled = true
+	CreditsButton.disabled = true
 	GameManager.Director.show_buttons()
 	
 func ShowCredits():

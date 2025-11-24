@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://cmfsyjxq6uh86"]
+[gd_scene load_steps=73 format=3 uid="uid://cmfsyjxq6uh86"]
 
 [ext_resource type="Material" uid="uid://ck0pnku3q0055" path="res://Art/crt_shader/crt_shader_material.tres" id="1_e2l4f"]
 [ext_resource type="PackedScene" uid="uid://uqc7vo7b28q0" path="res://GameManager/GameManager.tscn" id="1_fyqef"]
@@ -65,6 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://bwmi5i8yx6hdp" path="res://Art/StaticVideoFrames/ezgif-frame-039.jpg" id="49_08cx6"]
 [ext_resource type="Texture2D" uid="uid://hr1igyt61v0o" path="res://Art/StaticVideoFrames/ezgif-frame-040.jpg" id="50_sw3u4"]
 [ext_resource type="Texture2D" uid="uid://clrparq3y58lu" path="res://Intro/start_button.png" id="51_5g28c"]
+[ext_resource type="Texture2D" uid="uid://cyjamit7yecs1" path="res://Intro/credits_button.png" id="59_bh67b"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e2l4f"]
 viewport_path = NodePath("SubViewport")
@@ -323,10 +324,11 @@ offset_top = -128.0
 offset_right = 26.0001
 offset_bottom = -128.0
 
-[node name="IntroNode" type="Node" parent="GameManager" node_paths=PackedStringArray("IntroAnim", "StartButton")]
+[node name="IntroNode" type="Node" parent="GameManager" node_paths=PackedStringArray("IntroAnim", "StartButton", "CreditsButton")]
 script = ExtResource("10_7rqds")
 IntroAnim = NodePath("AnimatedSprite2D")
 StartButton = NodePath("StartButton")
+CreditsButton = NodePath("CreditsButton")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GameManager/IntroNode"]
 visible = false
@@ -345,10 +347,11 @@ offset_bottom = 1069.0
 texture_normal = ExtResource("51_5g28c")
 
 [node name="CreditsButton" type="TextureButton" parent="GameManager/IntroNode"]
-offset_left = 1418.0
-offset_top = 54.0
-offset_right = 1877.0
-offset_bottom = 485.0
+offset_left = 1401.0
+offset_top = 20.0
+offset_right = 1901.0
+offset_bottom = 227.0
+texture_normal = ExtResource("59_bh67b")
 
 [node name="ActionButtons" type="Node2D" parent="."]
 
