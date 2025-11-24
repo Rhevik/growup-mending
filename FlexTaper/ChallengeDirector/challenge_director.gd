@@ -5,8 +5,8 @@ extends Node
 @export var challengeTimer: Timer
 @export var tvStatic: AudioStreamPlayer
 @export var introMusic: AudioStreamPlayer
-@export var successMusic: AudioStreamPlayer
-@export var failMusic: AudioStreamPlayer
+@export var successList: Array[AudioStreamPlayer]
+@export var failList: Array[AudioStreamPlayer]
 @export var tvSprite: AnimatedSprite2D
 @export var tvBacking: Sprite2D
 @export var staticTv: Sprite2D
@@ -66,11 +66,11 @@ func ChallengeIntro():
 	SetSpriteFrames(challenge.damagedImage)
 	
 func ChallengeOuttroSuccess():
-	successMusic.play();
+	successList.pick_random().play();
 	await get_tree().create_timer(2.25).timeout
 	
 func ChallengeOuttroFail():
-	failMusic.play();
+	failList.pick_random().play();
 	Log.m("Challenge Fail")
 	await get_tree().create_timer(2.25).timeout
 	Log.m("Challenge Fail End")

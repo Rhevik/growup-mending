@@ -1,19 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://cts82vqplkhxn"]
+[gd_scene load_steps=10 format=3 uid="uid://cts82vqplkhxn"]
 
 [ext_resource type="Script" uid="uid://cagflvtcnb2wr" path="res://ChallengeDirector/challenge_director.gd" id="1_valok"]
 [ext_resource type="AudioStream" uid="uid://dr857jjx2w7n4" path="res://Assets/Sound/FixIt.wav" id="2_nb0th"]
 [ext_resource type="AudioStream" uid="uid://bj2o4d0ctu2h4" path="res://Assets/Sound/AwDangit.wav" id="3_ghvj2"]
 [ext_resource type="AudioStream" uid="uid://btktldulio5kn" path="res://Assets/Sound/Tremendous.wav" id="4_ox2pi"]
+[ext_resource type="AudioStream" uid="uid://cv2v2blg33k2v" path="res://Assets/Sound/No.wav" id="4_p26ki"]
+[ext_resource type="AudioStream" uid="uid://bmll3yurslbm" path="res://Assets/Sound/Repurrfect.wav" id="5_nri7k"]
 [ext_resource type="AudioStream" uid="uid://pcibu880tqjc" path="res://Assets/Sound/tv-static-sound.mp3" id="6_nri7k"]
+[ext_resource type="AudioStream" uid="uid://jca6wdq5be17" path="res://Assets/Sound/Splamended.wav" id="7_4mh1r"]
+[ext_resource type="AudioStream" uid="uid://n8h2d67xax2j" path="res://Assets/Sound/Transfixing.wav" id="8_4mh1r"]
 
-[node name="ChallengeDirector" type="Node" node_paths=PackedStringArray("introTimer", "challengeTimer", "tvStatic", "introMusic", "successMusic", "failMusic")]
+[node name="ChallengeDirector" type="Node" node_paths=PackedStringArray("introTimer", "challengeTimer", "tvStatic", "introMusic", "successList", "failList")]
 script = ExtResource("1_valok")
 introTimer = NodePath("IntroTimer")
 challengeTimer = NodePath("ChallengeTimer")
 tvStatic = NodePath("Static")
 introMusic = NodePath("Fixit")
-successMusic = NodePath("Success")
-failMusic = NodePath("Fail")
+successList = [NodePath("Success1"), NodePath("Success2"), NodePath("Success3"), NodePath("Success4")]
+failList = [NodePath("Fail"), NodePath("Fail2")]
 
 [node name="IntroTimer" type="Timer" parent="."]
 wait_time = 0.25
@@ -29,8 +33,20 @@ stream = ExtResource("2_nb0th")
 [node name="Fail" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ghvj2")
 
-[node name="Success" type="AudioStreamPlayer" parent="."]
+[node name="Fail2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_p26ki")
+
+[node name="Success1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ox2pi")
+
+[node name="Success2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_nri7k")
+
+[node name="Success3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_4mh1r")
+
+[node name="Success4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_4mh1r")
 
 [node name="Static" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_nri7k")
