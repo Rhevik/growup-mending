@@ -79,7 +79,9 @@ Director = NodePath("ChallengeDirector")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_p13vs")
 
-[node name="ChallengeDirector" parent="." instance=ExtResource("2_v4rul")]
+[node name="ChallengeDirector" parent="." node_paths=PackedStringArray("successList", "failList") instance=ExtResource("2_v4rul")]
+successList = [NodePath("Success1"), NodePath("Success2"), NodePath("Success3"), NodePath("Success4")]
+failList = [NodePath("Fail"), NodePath("Fail2")]
 
 [node name="Credits" parent="." instance=ExtResource("9_tb2wi")]
 anchors_preset = 8

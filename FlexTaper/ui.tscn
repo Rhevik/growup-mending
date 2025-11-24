@@ -311,7 +311,9 @@ AllChallenges = Array[ExtResource("2_nltto")]([ExtResource("9_etlur"), ExtResour
 Intro = NodePath("IntroNode")
 CreditsThing = NodePath("AnimationPlayer")
 
-[node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("tvSprite", "tvBackingBad", "tvBackingNormal", "tvBackingWin", "staticTv", "renderViewport", "buttonContainerNode")]
+[node name="ChallengeDirector" parent="GameManager" index="1" node_paths=PackedStringArray("successList", "failList", "tvSprite", "tvBackingBad", "tvBackingNormal", "tvBackingWin", "staticTv", "renderViewport", "buttonContainerNode")]
+successList = [NodePath("Success1"), NodePath("Success2"), NodePath("Success3"), NodePath("Success4"), NodePath("Success5")]
+failList = [NodePath("Fail"), NodePath("Fail2"), NodePath("Fail3")]
 tvSprite = NodePath("../../SubViewport/TelevisionAnimation")
 tvBackingBad = NodePath("../../SubViewport/Backings/BackingBad")
 tvBackingNormal = NodePath("../../SubViewport/Backings/BackingNormal")
@@ -320,10 +322,16 @@ staticTv = NodePath("../../SubViewport/Static")
 renderViewport = NodePath("../../SubViewport")
 buttonContainerNode = NodePath("../../ActionButtons")
 
-[node name="Success3" parent="GameManager/ChallengeDirector" index="7"]
+[node name="Fail3" parent="GameManager/ChallengeDirector" index="5"]
+volume_db = 5.41
+
+[node name="Success1" parent="GameManager/ChallengeDirector" index="6"]
+volume_db = 3.035
+
+[node name="Success3" parent="GameManager/ChallengeDirector" index="8"]
 volume_db = 10.065
 
-[node name="Success4" parent="GameManager/ChallengeDirector" index="8"]
+[node name="Success4" parent="GameManager/ChallengeDirector" index="9"]
 volume_db = 5.34
 
 [node name="Credits" parent="GameManager" index="2"]

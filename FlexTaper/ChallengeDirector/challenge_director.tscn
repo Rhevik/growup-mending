@@ -40,6 +40,7 @@ stream = ExtResource("4_p26ki")
 
 [node name="Fail3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_fiep2")
+volume_db = 4.955
 
 [node name="Success1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ox2pi")
