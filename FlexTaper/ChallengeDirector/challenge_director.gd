@@ -20,6 +20,7 @@ func StartChallenge(newChallenge):
 	challenge = newChallenge
 	shuffle_buttons()
 	await ChallengeIntro()
+	disable_buttons(false)
 	var answer = await ChallengeGame()
 	disable_buttons(true)
 	
@@ -63,7 +64,6 @@ func ChallengeIntro():
 	tvStatic.stop();
 	staticTv.visible = false
 	SetSpriteFrames(challenge.damagedImage)
-	disable_buttons(false)
 	
 func ChallengeOuttroSuccess():
 	successMusic.play();
@@ -89,17 +89,14 @@ func ChallengeGame() -> Challenge.AcceptedSolutions:
 func press_kiss():
 	if (_solutionAllowed):
 		solution = Challenge.AcceptedSolutions.KISS
-		disable_buttons(true)
 
 func press_whack():
 	if (_solutionAllowed):
 		solution = Challenge.AcceptedSolutions.WHACK
-		disable_buttons(true)
 
 func press_tape():
 	if (_solutionAllowed):
 		solution = Challenge.AcceptedSolutions.TAPE
-		disable_buttons(true)
 	
 func disable_buttons(disabled):
 	buttonContainerNode.visible = not disabled
