@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="Challenge" load_steps=14 format=3 uid="uid://c3nhcy5j6pptk"]
+
+[ext_resource type="Texture2D" uid="uid://buyy1adkvlup8" path="res://Art/Phone/phone_broken.png" id="1_yqouw"]
+[ext_resource type="Texture2D" uid="uid://bvujhmu21alwg" path="res://Art/Phone/phone_kiss.png" id="2_4uqyn"]
+[ext_resource type="Script" path="res://Challenges/challengeResult.gd" id="3_p1kdv"]
+[ext_resource type="Script" uid="uid://bukmyuebwoyh7" path="res://Challenges/challenge.gd" id="4_yu60b"]
+[ext_resource type="Texture2D" uid="uid://wxd6s56gc7oc" path="res://Art/Phone/phone_tape.png" id="5_p1kdv"]
+[ext_resource type="Texture2D" uid="uid://dxy2b4t38n6l" path="res://Art/Phone/phone_punch.png" id="6_yu60b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3l00"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yqouw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_66dqa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4uqyn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_ky4td"]
+script = ExtResource("3_p1kdv")
+resultImage = SubResource("SpriteFrames_66dqa")
+goodResult = false
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ovx5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_p1kdv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_66dqa"]
+script = ExtResource("3_p1kdv")
+resultImage = SubResource("SpriteFrames_5ovx5")
+goodResult = false
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ky4td"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_yu60b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_n8nao"]
+script = ExtResource("3_p1kdv")
+resultImage = SubResource("SpriteFrames_ky4td")
+goodResult = true
+metadata/_custom_type_script = "uid://whd152x28tog"
+
+[resource]
+script = ExtResource("4_yu60b")
+id = ""
+damagedImage = SubResource("SpriteFrames_r3l00")
+tapeResult = SubResource("Resource_66dqa")
+kissResult = SubResource("Resource_ky4td")
+whackResult = SubResource("Resource_n8nao")
+metadata/_custom_type_script = "uid://bukmyuebwoyh7"
